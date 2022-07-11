@@ -1,0 +1,60 @@
+// 定義顏色 此顏色可自由變換
+$primaryColor: #d04500; //主色
+$secondaryColor: #004852; //輔色
+//灰階
+$color-gray10: #f7f7f7;
+$color-gray20: #EBEBEB;
+$color-gray30: #D6D6D6;
+$color-gray40: #B8B7B7;
+$color-gray50:#949494;
+$color-gray60: #706F6F;
+$color-gray70: #504E4E;
+$color-gray80: #3A3A3A;
+$color-gray90: #1C1B1B;
+//其他顏色
+$color-beige: #F7EAD7;
+$color-cyan: #A2D6DD;
+$color-green: #C2C44C;
+$color-orange: #ED6C00;
+$color-blue: #0066cc;
+//$color-red: red;
+$color-yellow: #F3C640;
+$color-brown: #663C2A;
+$color-gray: #ccc;
+$color-dark: #333333;
+$color-hr: #666; //hr顏色
+$color-word: $color-gray90; //一般字的顏色
+$btn-word: #222; //按鈕字的顏色
+// 連結顏色
+$aColor: $primaryColor;
+$aHover: darken($aColor, 10);
+$aFocus:#d04500;
+// 表單focus顏色
+$form-focus: #0066cc; //表單
+$form-btn: #0066cc; //表單
+//------------------------------------------------------字型--------//
+// 字型設定
+$font-family: Lato,
+'PingFang TC',
+'Helvetica Neue',
+Helvetica,
+微軟正黑體,
+Arial,
+sans-serif;
+$font-size: 1em;
+//------------------------------------------------------格線系統-----//
+// 格線系統
+$grid-columns: 12 !default; //格線欄位數
+$grid-gutter-width: 30px !default; //左右padding
+$container-max: 1200px !default; //container最大寬
+//mediaquery
+$screen-lg: 1400px !default; //電腦
+$screen-md: 992px !default; //平板
+$screen-sm: 768px !default; //手機
+$screen-xs: 576px !default; //極小尺寸 - hyui
+$screen-xs-flex: 320px !default; //極小尺寸 - flex
+//-------------------------------------------------------客製化------//
+$fatfooterBgColor: $color-gray80; //fatFooter 底色
+//--------------------------------------------------------客製化------//
+$rounded-angle: 6px; //整站導角
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99); //動態預設
