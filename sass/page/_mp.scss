@@ -52,7 +52,7 @@
             font-size: 5rem;
             letter-spacing: 0.3em;
             animation: fadeinLeft 1s ease-in;
-            line-height: 1.5rem;
+            line-height: 1.4em;
             @include screen('mobile') {
                 display: inline-block;
                 font-size: 2rem;
@@ -80,7 +80,7 @@
             display: block;
             letter-spacing: 0.2em;
             font-size: 3.75rem;
-            line-height: 1.5em;
+            line-height: 1.4em;
             animation: fadeinDown 2.5s ease-in;
             @include screen('mobile') {
                 display: inline-block;

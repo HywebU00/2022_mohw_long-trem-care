@@ -1,32 +1,28 @@
 .category {
     @extend %clearfix;
     text-align: left;
-    margin: 1em auto;
+    margin: 0 auto .5em;
     ul {
         @include li-reset;
         li {
-            margin: 0px 3px 3px 0px;
+            margin: 0px 6px 5px 0px;
             display: block;
             float: left;
         }
     }
     a {
-        border: 1px solid #CCC;
-        padding: .4em 1em;
+        border: 1px solid $color-gray60;
+        padding: .3em 1em;
         display: block;
-        color: #333;
+        color: $color-gray60;
         box-sizing: border-box;
-        border-radius:4px;
+        border-radius: 4px;
         &:hover,
-        &:focus {
-            color: #FFF;
-            background: darken($primaryColor, 15);
-            border: 1px solid darken($primaryColor, 15);
-            box-shadow: none;
-        }
+        &:focus,
         &.active {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background: $color-gray60;
+            font-weight: bold;
         }
         span {
             font-size: .813em;

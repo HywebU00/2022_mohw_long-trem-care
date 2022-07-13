@@ -49,20 +49,32 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
+    padding: 2em 0;
     >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
+        flex-wrap: wrap;
+    }
+    h2.title {
+        width: 100%;
+        font-weight: 500;
+        font-size: 1.875em;
+        color: $color-brown;
+        margin: 0 0 .5em 0;
+    }
+    .breadcrumb {
+        width: 100%;
     }
     .center_block {
         flex: none;
-        flex-basis: 100%;
-        max-width: 100%;
+        flex-basis: calc(100% - 300px);
+        max-width: calc(100% - 300px);
     }
     .left_block {
         flex: none;
         flex-basis: 260px;
         max-width: 260px;
-        margin-right: 40px;
+        margin: 0 40px 0 0;
         &.hidden {
             +.center_block {
                 flex: none;

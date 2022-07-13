@@ -4,7 +4,7 @@ $(function() {
     if ($('.stickySidebar').length > 0) {
         var stickySidebar = new StickySidebar('.stickySidebar', {
             containerSelector: '.main',
-            topSpacing: 93,
+            topSpacing: 100,
             bottomSpacing: 0,
             minWidth: 768,
             resizeSensor: true,

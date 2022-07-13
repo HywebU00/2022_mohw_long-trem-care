@@ -1,26 +1,38 @@
 .breadcrumb {
-    border-bottom: 1px solid #EEE;
-    padding: .1em 0em .1em;
-    font-size: .813em;
-    margin: 0px auto 5px;
+    font-size: .875em;
+    margin: 0 0 1.5em 0;
     ul {
         @include li-reset;
         li {
             display: inline-block;
             margin: 0px .1em .1em 0px;
+            color: $color-brown;
             &:before {
-                @extend %slash;
+                content: "";
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-top: 2px solid $color-brown;
+                border-right: 2px solid $color-brown;
+                transform: rotate(45deg);
+                margin-right: 8px;
             }
             &:first-child:before {
                 content: "";
                 display: inline-block;
-                color: #666;
-                margin-left: 0;
+                width: 16px;
+                height: 16px;
+                background: url(../images/basic/icon_home.svg) center no-repeat;
+                background-size: contain;
+                margin: 0 5px -2px 0;
                 padding: 0;
+                border: 0;
+                transform: rotate(0);
             }
         }
     }
     a {
-        @include aSetting_nocolor;
+        color: $color-brown;
+        text-decoration: underline;
     }
 }
