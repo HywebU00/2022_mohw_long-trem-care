@@ -261,27 +261,27 @@
             }
         }
     }
-    .keywordHot {
-        flex: 1 1 100%;
-        ul {
-            font-size: 0.813em;
-            line-height: 1.65em;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-            list-style-type: none;
-            &:before {}
-            li {
-                margin: 0;
-                padding: 0.5em;
-                flex: 0 0 auto;
-            }
-            a {
-                @include aSetting_nocolor;
-            }
-        }
-    }
+    // .keywordHot {
+    //     flex: 1 1 100%;
+    //     ul {
+    //         font-size: 0.813em;
+    //         line-height: 1.65em;
+    //         margin: 0;
+    //         padding: 0;
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         list-style-type: none;
+    //         &:before {}
+    //         li {
+    //             margin: 0;
+    //             padding: 0.5em;
+    //             flex: 0 0 auto;
+    //         }
+    //         a {
+    //             @include aSetting_nocolor;
+    //         }
+    //     }
+    // }
 }
 
 // m_search

@@ -44,6 +44,9 @@
                 border-bottom: 1px solid $color-gray20;
                 position: relative; // outline: 1px solid blue;
                 display: flex;
+                @include screen('tablet') {
+                    flex-wrap: wrap;
+                }
                 &:last-of-type {
                     border-bottom: 0;
                 }
@@ -53,10 +56,13 @@
                 &>a {
                     flex: 1 1 auto;
                     display: block;
-                    padding-left: 2em;
+                    padding-left: 2rem;
                     position: relative;
                     line-height: 1.45em;
                     color: $color-word;
+                    @include screen('tablet') {
+                        flex: 0 1 100%;
+                    }
                     &:hover {
                         color: $aHover;
                     }
@@ -86,6 +92,10 @@
                     color: $color-gray50;
                     font-size: .938em;
                     text-align: right;
+                    @include screen('tablet') {
+                        flex: 0 1 auto;
+                        margin-left: 2rem;
+                    }
                 }
             }
         }

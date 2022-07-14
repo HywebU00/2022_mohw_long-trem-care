@@ -75,10 +75,11 @@ body {
         flex: none;
         flex-basis: 260px;
         max-width: 260px;
-        margin: 0 20px 0 0;
+        margin: 0 30px 0 0;
         @include screen('tablet') {
             flex-basis: 200px;
             max-width: 200px;
+            margin-right: 20px;
         }
         @include screen('mobile') {
             flex-basis: 100%;
@@ -99,8 +100,8 @@ body {
         }
         +.center_block {
             flex: auto;
-            flex-basis: calc(100% - 280px);
-            max-width: calc(100% - 280px);
+            flex-basis: calc(100% - 290px);
+            max-width: calc(100% - 290px);
             @include screen('tablet') {
                 flex-basis: calc(100% - 220px);
                 max-width: calc(100% - 220px);
@@ -149,6 +150,64 @@ body {
     }
     &.large_size {
         font-size: 1.125em;
+    }
+}
+
+.innerpage_search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    vertical-align: top;
+    margin: 0 0 1em 0;
+    box-sizing: border-box;
+    label {
+        font-size: 0em;
+    }
+    .form_grp {
+        position: relative;
+        flex: 0 1 100%;
+        margin: 0;
+        display: flex;
+        input {
+            margin: 0;
+            box-shadow: none;
+            border: 0;
+            &[type='submit'] {
+                min-width: auto;
+                border-radius: 3px;
+                font-size: 0em;
+                width: 32px !important;
+                height: 32px;
+                background: $color-gray10 url(../images/basic/icon_search.svg) no-repeat center center;
+                background-size: 20px;
+                border: none;
+                display: block;
+                position: absolute;
+                right: 4px;
+                top: calc(50% - 16px);
+                box-sizing: border-box;
+                transition: .2s;
+                opacity: .7;
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
+            &[type='text'] {
+                background-color: #fff;
+                border: 1px solid $color-gray30;
+                width: 100%;
+                padding: 0.5em;
+            }
+        }
+        // button,
+        // .btn,
+        // .btn-search {
+        //     min-width: auto;
+        //     padding: 0.2em 1em;
+        //     margin: 0;
+        // }
     }
 }
 

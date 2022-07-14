@@ -220,7 +220,7 @@ $(function() {
 });
 
 $(function() {
-    $('.left_block').prepend('<button type="button" class="leftCtrl">次選單</button>');
+    $('.leftblock_nodemenu').before('<button type="button" class="leftCtrl">次選單</button>');
 
     $(".leftCtrl").click(function(e) {
         $(this).toggleClass('active');
