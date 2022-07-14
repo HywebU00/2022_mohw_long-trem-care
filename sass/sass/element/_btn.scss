@@ -102,7 +102,7 @@ $btn-radius:4px;
 // }
 .btn-submit {
     // @extend %btn;
-    @include btn_setting(lighten($primaryColor, 5), #FFF);
+    @include btn_setting($primaryColor, #FFF);
 }
 
 .btn-reset {
