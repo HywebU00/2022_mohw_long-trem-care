@@ -19,11 +19,11 @@
         justify-content: center;
         flex-wrap: wrap;
         li {
-            min-width: 40px;
-            height: 40px;
+            min-width: 36px;
+            height: 36px;
             margin: 2px;
             list-style: none;
-            flex: 0 0 40px;
+            flex: 0 0 36px;
             box-sizing: border-box;
             a {
                 border-radius: 50%;
@@ -36,10 +36,10 @@
                 justify-content: center;
                 white-space: nowrap;
                 font-size: 1em;
-                color: $color-word;
+                color: $color-gray60;
                 // @include gradient (#F7F7F7, #EAEAEA, vertical);
-                background: #eee;
-                border: #ccc solid 1px;
+                background: transparent;
+                border: $color-gray60 solid 1px;
                 &:hover,
                 &:focus {
                     background: $primaryColor;
@@ -51,7 +51,7 @@
                 a {
                     color: #fff !important;
                     background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    border: $form-focus solid 1px;
                 }
             }
             %arrow {
@@ -73,13 +73,13 @@
                 a {
                     text-indent: -9999px;
                     position: relative;
-                    background: #fff;
-                    border-color: #fff;
+                    background: transparent;
+                    border-color: transparent;
                     &:hover,
                     &:focus {
+                        background: #fff;
                         &:before,
                         &:after {
-                            border: 2px solid #FFF;
                             border-left: none;
                             border-bottom: none;
                         }

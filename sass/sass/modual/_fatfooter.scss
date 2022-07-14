@@ -31,7 +31,7 @@
             border-left: none;
             border-bottom: none;
             transform: rotate(-45deg);
-            left: 50%;
+            left: calc(50% - 2px);
             top: 12px;
             margin-left: -6px;
             transition: .3s ease-out;

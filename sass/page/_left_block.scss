@@ -80,11 +80,14 @@
 
 // 左側節點選單
 .leftblock_nodemenu {
-    margin-bottom: 1.5em;
+    display: block;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 13px;
     border-radius: 10px;
     overflow: hidden;
+    @include screen('mobile') {
+        display: none;
+    }
     .title {
         margin: 0 0 1em;
         padding: 0.5em;
@@ -106,7 +109,7 @@
             a {
                 position: relative;
                 display: block;
-                padding: 1em 2.5em 1em 1em;
+                padding: .8em 2.5em .8em 1em;
                 color: #333;
                 background-color: #fff;
                 transition: .2s ease-in;
@@ -127,6 +130,9 @@
                         border-top: 2px solid #fff;
                         border-right: 2px solid #fff;
                         transform: rotate(45deg);
+                        @include screen('mobile') {
+                            content: none;
+                        }
                     }
                 }
             }

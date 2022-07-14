@@ -30,7 +30,6 @@ a.goCenter {
     height: 2em;
     line-height: 2em;
     background: $secondaryColor;
-    color: #fff;
     text-decoration: none;
     z-index: 999999999999;
     opacity: 0;
@@ -45,6 +44,7 @@ a.goCenter {
         outline: none;
         top: 0;
         opacity: 1;
+        color: #fff;
     }
 }
 

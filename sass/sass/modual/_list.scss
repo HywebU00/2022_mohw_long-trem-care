@@ -24,6 +24,7 @@
         padding-top: 1em;
         border-radius: 10px;
         box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.08);
+        background: #fff;
         .total {
             font-size: .875em;
             padding: 0 1.5rem;
@@ -82,7 +83,7 @@
                 time {
                     flex: 0 0 120px;
                     display: block;
-                    color: #AAA;
+                    color: $color-gray50;
                     font-size: .938em;
                     text-align: right;
                 }

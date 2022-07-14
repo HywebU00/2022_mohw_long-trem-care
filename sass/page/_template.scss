@@ -50,6 +50,7 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding: 2em 0;
+    background-color: $color-bg;
     >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
@@ -66,15 +67,29 @@ body {
         width: 100%;
     }
     .center_block {
-        flex: none;
-        flex-basis: calc(100% - 300px);
-        max-width: calc(100% - 300px);
+        flex-grow: 1;
+        flex-basis: 100%;
+        max-width: 100%;
     }
     .left_block {
         flex: none;
         flex-basis: 260px;
         max-width: 260px;
-        margin: 0 40px 0 0;
+        margin: 0 20px 0 0;
+        @include screen('tablet') {
+            flex-basis: 200px;
+            max-width: 200px;
+        }
+        @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin: 0 0 20px 0;
+            +.center_block {
+                flex: none;
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
         &.hidden {
             +.center_block {
                 flex: none;
@@ -84,15 +99,48 @@ body {
         }
         +.center_block {
             flex: auto;
-            flex-basis: calc(100% - 300px);
-            max-width: calc(100% - 300px);
-        }
-        @include screen('tablet') {
-            display: none;
-            +.center_block {
-                flex: none;
+            flex-basis: calc(100% - 280px);
+            max-width: calc(100% - 280px);
+            @include screen('tablet') {
+                flex-basis: calc(100% - 220px);
+                max-width: calc(100% - 220px);
+            }
+            @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
+            }
+        }
+        .leftCtrl {
+            display: none;
+            width: 100%;
+            margin: 0 0 3px 0;
+            background-color: $secondaryColor;
+            color: #fff;
+            padding: .7em 1em;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 13px;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 20px;
+                top: calc(50% - 8px);
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+                transform: rotate(135deg);
+                display: block;
+                transition: all .5s;
+            }
+            &.active {
+                &::after {
+                    transform: rotate(315deg);
+                    top: calc(50% - 4px);
+                }
+            }
+            @include screen('mobile') {
+                display: block;
             }
         }
     }

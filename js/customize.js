@@ -218,3 +218,12 @@ $(function() {
         });
     });
 });
+
+$(function() {
+    $('.left_block').prepend('<button type="button" class="leftCtrl">次選單</button>');
+
+    $(".leftCtrl").click(function(e) {
+        $(this).toggleClass('active');
+        $(".left_block .leftblock_nodemenu").stop().slideToggle();
+    });
+});

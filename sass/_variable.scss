@@ -24,14 +24,15 @@ $color-gray: #ccc;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
 $color-word: $color-gray90; //一般字的顏色
+$color-bg: #F9F7F6;
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
 $aColor: $primaryColor;
 $aHover: darken($aColor, 10);
 $aFocus:#d04500;
 // 表單focus顏色
-$form-focus: #0066cc; //表單
-$form-btn: #0066cc; //表單
+$form-focus: $primaryColor; //表單
+$form-btn: $primaryColor; //表單
 //------------------------------------------------------字型--------//
 // 字型設定
 $font-family: Lato,
