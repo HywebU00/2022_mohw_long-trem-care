@@ -39,8 +39,30 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
+            &.download {
+                &>li {
+                    &>a {
+                        &::before {
+                            content: "";
+                            display: block;
+                            background: url(../images/basic/icon_download.svg) center no-repeat;
+                            background-size: contain;
+                            flex: none;
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 8px;
+                            transition: .2s ease-in;
+                        }
+                        &:hover {
+                            &::before {
+                                transform: translateY(2px);
+                            }
+                        }
+                    }
+                }
+            }
             &>li {
-                padding: 1em;
+                padding: 1em 1.5em;
                 border-bottom: 1px solid $color-gray20;
                 position: relative; // outline: 1px solid blue;
                 display: flex;
@@ -55,8 +77,8 @@
                 }
                 &>a {
                     flex: 1 1 auto;
-                    display: block;
-                    padding-left: 2rem;
+                    display: flex;
+                    //padding-left: 2rem;
                     position: relative;
                     line-height: 1.45em;
                     color: $color-word;
@@ -67,11 +89,12 @@
                         color: $aHover;
                     }
                     .num {
-                        width: 1.5em;
+                        min-width: 1.5em;
+                        margin-right: 5px;
                         text-align: right;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                        //position: absolute;
+                        // top: 0;
+                        // left: 0;
                         color: $primaryColor;
                         &:after {
                             content: ".";
@@ -93,8 +116,8 @@
                     font-size: .938em;
                     text-align: right;
                     @include screen('tablet') {
-                        flex: 0 1 auto;
-                        margin-left: 2rem;
+                        flex: 0 1 100%;
+                        margin-left: 24px;
                     }
                 }
             }
