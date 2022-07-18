@@ -1,15 +1,15 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     //sticky sidebar
-    if ($('.stickySidebar').length > 0) {
-        var stickySidebar = new StickySidebar('.stickySidebar', {
-            containerSelector: '.main',
-            topSpacing: 100,
-            bottomSpacing: 0,
-            minWidth: 768,
-            resizeSensor: true,
-        });
-    }
+    // if ($('.stickySidebar').length > 0) {
+    //     var stickySidebar = new StickySidebar('.stickySidebar', {
+    //         containerSelector: '.main',
+    //         topSpacing: 0,
+    //         bottomSpacing: 100,
+    //         minWidth: 768,
+    //         resizeSensor: true,
+    //     });
+    // }
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
@@ -226,4 +226,19 @@ $(function() {
         $(this).toggleClass('active');
         $(".left_block .leftblock_nodemenu").stop().slideToggle();
     });
+});
+
+//svg 變色
+jQuery('img.svg').each(function() {
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    jQuery.get(imgURL, function(data) {
+        var $svg = jQuery(data).find('svg');
+        if (typeof imgID !== 'undefined') { $svg = $svg.attr('id', imgID); }
+        if (typeof imgClass !== 'undefined') { $svg = $svg.attr('class', imgClass + ' replaced-svg'); }
+        $svg = $svg.removeAttr('xmlns:a');
+        $img.replaceWith($svg);
+    }, 'xml');
 });

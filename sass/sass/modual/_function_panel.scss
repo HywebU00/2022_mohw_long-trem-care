@@ -1,5 +1,5 @@
 // function_panel setting   ------------------------
-.function_panel {   
+.function_panel {
     margin: .2em 0;
     padding: .5em 0 .5em;
     min-height: 35px;
@@ -7,45 +7,50 @@
     // border-bottom: 1px solid #DDD;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
-
     @include screen('mobile') {
         margin: .6em 0;
         padding: .5em 0 .5em;
     }
-    .share { flex:0 0 auto; }
-    .function { flex:0 0 auto; }
+    .share {
+        flex: 0 0 auto;
+    }
+    .function {
+        flex: 0 0 auto;
+    }
     .publish_time {
-        flex:1 1 auto;
+        flex: 1 1 auto;
         min-width: 100px;
         display: block;
-        color:#666;
-        span{
-            font-size:.938em;
-            @include screen('mobile') { display:none; }
+        color: #666;
+        span {
+            font-size: .938em;
+            @include screen('mobile') {
+                display: none;
+            }
         }
-        time{
-            font-family:georgia;
-            font-size:1.125em;
-            @include screen('mobile') { font-size:.938em; }
+        time {
+            font-family: georgia;
+            font-size: 1.125em;
+            @include screen('mobile') {
+                font-size: .938em;
+            }
         }
         &:before {
             content: "";
             display: inline-block;
             width: 12px;
             height: 12px;
-            top:.3em;
+            top: .3em;
             background: url(../images/basic/icon_time.png) no-repeat center center;
             background-size: 12px;
         }
     }
 }
 
-
 // function   ------------------------
 $function_color:#666;
-
 //可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
 //icon基本設定
 %function_before {
@@ -56,10 +61,13 @@ $function_color:#666;
     margin-right: .5em;
     display: inline-block;
 }
-div.function{
+
+div.function {
     box-sizing: border-box;
     @extend %clearfix;
     margin: .5em 0;
+    display: flex;
+    align-items: center;
     ul {
         @include li-reset;
         display: flex;
@@ -67,19 +75,20 @@ div.function{
         list-style-type: none;
         li {
             margin: 0 0px 0px 3px;
-            flex:0 0 auto;
-            button, a {
+            flex: 0 0 auto;
+            button,
+            a {
                 font-size: .813em;
                 display: block;
-                padding: .2em 1em;
-                background: $function_color;
-                border-color: $function_color;
+                padding: .2em;
+                //background: $function_color;
+                //border-color: $function_color;
                 color: #FFF;
                 border-radius: 4px;
                 &:hover,
                 &:focus {
-                  background: darken($aHover, 0);
-                  border-color: darken($aHover, 0);
+                    // background: darken($aHover, 0);
+                    // border-color: darken($aHover, 0);
                 }
             }
             // 回上一頁
@@ -109,9 +118,10 @@ div.function{
         }
     }
 }
+
 // 放進function_panel樣式
 .function_panel {
-    .font_size{
+    .font_size {
         padding: 0;
         flex: initial;
     }
@@ -123,7 +133,7 @@ div.function{
             li {
                 font-size: 1em;
                 margin: 0 .2em;
-                flex:0 0 32px;
+                flex: 0 0 32px;
                 a {
                     display: block;
                     box-sizing: border-box;
@@ -135,10 +145,13 @@ div.function{
                     background: #F1F1F1;
                     text-indent: -9999px;
                     position: relative;
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         background: $aHover;
                         color: #FFF;
-                        &:before { filter: invert(100%); }
+                        &:before {
+                            filter: invert(100%);
+                        }
                     }
                     &:before {
                         content: "";
@@ -155,13 +168,14 @@ div.function{
                         background-size: 100%;
                     }
                 }
-
                 &.print {
                     a:before {
                         background: url(../images/basic/icon_print-style2.svg) no-repeat center center;
                         background-size: 100%;
                     }
-                    @include screen('mobile') { display: none; }
+                    @include screen('mobile') {
+                        display: none;
+                    }
                 }
                 &.forward {
                     a:before {
@@ -177,15 +191,14 @@ div.function{
 // share 基本樣式   ------------------------
 .share {
     box-sizing: border-box;
-    margin: .5em 0;
     ul {
         @include li-reset;
         display: flex;
         li {
             margin: 0px 3px 3px;
-            flex:0 0 32px;
-            a{
-                display:block;
+            flex: 0 0 32px;
+            a {
+                display: block;
                 height: 32px;
             }
             @include screen('tablet') {
@@ -196,10 +209,12 @@ div.function{
             img {
                 width: 100%;
                 height: 100%;
+                fill: $color-gray60;
             }
         }
     }
 }
+
 // 放進function_panel樣式
 .function_panel {
     .share {
@@ -207,14 +222,14 @@ div.function{
         text-align: center;
         height: 32px;
         margin: 0 4px;
-        position:relative;
-        a.shareButton{
+        position: relative;
+        a.shareButton {
             display: block;
             background: #F1F1F1;
             border-radius: 50%;
             width: 32px;
             height: 32px;
-            text-indent:-9999px;
+            text-indent: -9999px;
             text-align: center;
             position: relative;
             &:before {
@@ -224,7 +239,7 @@ div.function{
                 height: 60%;
                 top: 20%;
                 left: 20%;
-                background: url(../images/basic/icon_share.svg) no-repeat center center  !important;
+                background: url(../images/basic/icon_share.svg) no-repeat center center !important;
                 background-size: 24px !important;
             }
             // img {
@@ -232,54 +247,58 @@ div.function{
             //   height: 60%;
             //   margin: 20% auto;
             // }
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background: $aHover;
                 // img {
                 //   filter: invert(100%);
                 // }
-                &:before { filter: invert(100%); }
+                &:before {
+                    filter: invert(100%);
+                }
             }
         }
         ul {
-          display: none;
-          position: absolute;
-          top: 2.5em;
-          left: -6px;
-          // width: 44px;
-          padding: 6px;
-          background: #FFF;
-          box-shadow: 2px 2px 5px RGBA(0, 0, 0, .2);
-          border-radius: 8px;
-          z-index: 999;
-          height: auto;
-          li {
-            display: block;
-            margin: 0 auto.5em;
-            &:last-child{
-              margin-bottom: 0;
-            }
-            img {
-              width: 100%;
-              height: 100%;
-              margin: 0 auto;
-            }
-            a {
-              background: transparent;
-              display: block;
-              padding: 0;
-              width: 32px;
-              height: 32px;
-              &:hover, &:focus {
-                background: transparent;
-                img {
-                  filter: grayscale(1);
+            display: none;
+            position: absolute;
+            top: 2.5em;
+            left: -6px;
+            // width: 44px;
+            padding: 6px;
+            background: #FFF;
+            box-shadow: 2px 2px 5px RGBA(0, 0, 0, .2);
+            border-radius: 8px;
+            z-index: 999;
+            height: auto;
+            li {
+                display: block;
+                margin: 0 auto.5em;
+                &:last-child {
+                    margin-bottom: 0;
                 }
-              }
-              &:focus {
-                // outline: 1px solid $primaryColor;
-              }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                }
+                a {
+                    background: transparent;
+                    display: block;
+                    padding: 0;
+                    width: 32px;
+                    height: 32px;
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        img {
+                            filter: grayscale(1);
+                        }
+                    }
+                    &:focus {
+                        // outline: 1px solid $primaryColor;
+                    }
+                }
             }
-          }
         }
     }
 }

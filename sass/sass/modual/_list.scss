@@ -69,6 +69,9 @@
                 @include screen('tablet') {
                     flex-wrap: wrap;
                 }
+                @include screen('mobile') {
+                    padding: 1em;
+                }
                 &:last-of-type {
                     border-bottom: 0;
                 }
@@ -89,6 +92,7 @@
                         color: $aHover;
                     }
                     .num {
+                        //flex: 1 0 1.5em;
                         min-width: 1.5em;
                         margin-right: 5px;
                         text-align: right;
@@ -117,7 +121,7 @@
                     text-align: right;
                     @include screen('tablet') {
                         flex: 0 1 100%;
-                        margin-left: 24px;
+                        margin: 5px 0 0 0;
                     }
                 }
             }
