@@ -198,14 +198,19 @@ div.function {
         li {
             margin: 0px 3px 3px;
             flex: 0 0 32px;
-            a {
-                display: block;
-                height: 32px;
-            }
             @include screen('tablet') {
                 margin: 0px 1px 2px;
                 width: 32px;
                 height: 32px;
+            }
+            a {
+                display: block;
+                height: 32px;
+                &:hover {
+                    .svg path {
+                        fill: initial;
+                    }
+                }
             }
             img,
             .svg {
