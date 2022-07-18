@@ -208,7 +208,7 @@ div.function {
                 height: 32px;
                 &:hover {
                     .svg path {
-                        fill: initial;
+                        fill: inherit;
                     }
                 }
             }
