@@ -20,109 +20,110 @@
             }
         }
     }
-    .list {
-        padding-top: 1em;
-        border-radius: 10px;
-        box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.08);
-        background: #fff;
-        .total {
-            font-size: .875rem;
-            padding: 0 1.5rem;
-            color: $color-gray70;
-            margin-bottom: .5em;
-            .btn {
-                padding: .4em 1.25em;
-            }
+}
+
+.list {
+    padding-top: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    .total {
+        font-size: .875rem;
+        padding: 0 1.5rem;
+        color: $color-gray70;
+        margin-bottom: .5em;
+        .btn {
+            padding: .4em 1.25em;
         }
-        &>ul,
-        ol {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            &.download {
-                &>li {
-                    &>a {
-                        &::before {
-                            content: "";
-                            display: block;
-                            background: url(../images/basic/icon_download.svg) center no-repeat;
-                            background-size: contain;
-                            flex: none;
-                            width: 18px;
-                            height: 18px;
-                            margin-right: 8px;
-                            transition: .2s ease-in;
-                        }
-                        &:hover {
-                            &::before {
-                                transform: translateY(2px);
-                            }
-                        }
-                    }
-                }
-            }
+    }
+    &>ul,
+    ol {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        &.download {
             &>li {
-                padding: 1em 1.5em;
-                border-bottom: 1px solid $color-gray20;
-                position: relative; // outline: 1px solid blue;
-                display: flex;
-                @include screen('tablet') {
-                    flex-wrap: wrap;
-                }
-                @include screen('mobile') {
-                    padding: 1em;
-                }
-                &:last-of-type {
-                    border-bottom: 0;
-                }
-                .tag {
-                    margin-left: 2em;
-                }
                 &>a {
-                    flex: 1 1 auto;
-                    display: flex;
-                    //padding-left: 2rem;
-                    position: relative;
-                    line-height: 1.45em;
-                    color: $color-word;
-                    @include screen('tablet') {
-                        flex: 0 1 100%;
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/basic/icon_download.svg) center no-repeat;
+                        background-size: contain;
+                        flex: none;
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 8px;
+                        transition: .2s ease-in;
                     }
                     &:hover {
-                        color: $aHover;
-                    }
-                    .num {
-                        //flex: 1 0 1.5em;
-                        min-width: 1.5em;
-                        margin-right: 5px;
-                        text-align: right;
-                        //position: absolute;
-                        // top: 0;
-                        // left: 0;
-                        color: $primaryColor;
-                        &:after {
-                            content: ".";
-                            display: inline-block;
+                        &::before {
+                            transform: translateY(2px);
                         }
                     }
                 }
-                span.dept {
-                    display: inline-block;
-                    font-size: .938em;
-                    @include screen("mobile") {
-                        display: block;
+            }
+        }
+        &>li {
+            padding: 1em 1.5em;
+            border-bottom: 1px solid $color-gray20;
+            position: relative; // outline: 1px solid blue;
+            display: flex;
+            @include screen('tablet') {
+                flex-wrap: wrap;
+            }
+            @include screen('mobile') {
+                padding: 1em;
+            }
+            &:last-of-type {
+                border-bottom: 0;
+            }
+            .tag {
+                margin-left: 2em;
+            }
+            &>a {
+                flex: 1 1 auto;
+                display: flex;
+                //padding-left: 2rem;
+                position: relative;
+                line-height: 1.45em;
+                color: $color-word;
+                @include screen('tablet') {
+                    flex: 0 1 100%;
+                }
+                &:hover {
+                    color: $aHover;
+                }
+                .num {
+                    //flex: 1 0 1.5em;
+                    min-width: 1.5em;
+                    margin-right: 5px;
+                    text-align: right;
+                    //position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    color: $primaryColor;
+                    &:after {
+                        content: ".";
+                        display: inline-block;
                     }
                 }
-                time {
-                    flex: 0 0 120px;
+            }
+            span.dept {
+                display: inline-block;
+                font-size: .938em;
+                @include screen("mobile") {
                     display: block;
-                    color: $color-gray50;
-                    font-size: .938em;
-                    text-align: right;
-                    @include screen('tablet') {
-                        flex: 0 1 100%;
-                        margin: 5px 0 0 0;
-                    }
+                }
+            }
+            time {
+                flex: 0 0 120px;
+                display: block;
+                color: $color-gray50;
+                font-size: .938em;
+                text-align: right;
+                @include screen('tablet') {
+                    flex: 0 1 100%;
+                    margin: 5px 0 0 0;
                 }
             }
         }
