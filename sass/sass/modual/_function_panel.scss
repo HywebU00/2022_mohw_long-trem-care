@@ -79,7 +79,7 @@ div.function {
             button,
             a {
                 font-size: .813em;
-                display: block;
+                display: flex;
                 padding: .2em;
                 //background: $function_color;
                 //border-color: $function_color;
@@ -220,35 +220,64 @@ div.function {
         @include li-reset;
         display: flex;
         li {
-            margin: 0px 3px 3px;
-            flex: 0 0 30px;
-            @include screen('tablet') {
-                margin: 0px 1px 2px;
-                width: 30px;
-                height: 30px;
+            // margin: 0px 3px 3px;
+            // flex: 0 0 30px;
+            // @include screen('tablet') {
+            //     margin: 0px 1px 2px;
+            //     width: 30px;
+            //     height: 30px;
+            // }
+            // a {
+            //     display: block;
+            //     height: 30px;
+            //     &:hover {
+            //         .svg path {
+            //             fill: initial;
+            //         }
+            //         .svg.twitter path {
+            //             fill: #1da1f2;
+            //         }
+            //         .svg.line path {
+            //             fill: #00c300;
+            //         }
+            //     }
+            // }
+            &.print {
+                @include screen("mobile") {
+                    display: none;
+                }
             }
-            a {
-                display: block;
-                height: 30px;
-                &:hover {
-                    .svg path {
-                        fill: initial;
+            &.fb {
+                a {
+                    &:hover {
+                        .svg path {
+                            fill: #1877f2;
+                        }
                     }
-                    .svg.fb path {
-                        fill: #1877f2;
+                }
+            }
+            &.twitter {
+                a {
+                    &:hover {
+                        .svg path {
+                            fill: #00c300;
+                        }
                     }
-                    .svg.twitter path {
-                        fill: #1da1f2;
-                    }
-                    .svg.line path {
-                        fill: #00c300;
+                }
+            }
+            &.line {
+                a {
+                    &:hover {
+                        .svg path {
+                            fill: #1da1f2;
+                        }
                     }
                 }
             }
             img,
             .svg {
-                width: 30px;
-                height: 30px;
+                width: 32px;
+                height: 32px;
             }
             .svg path {
                 fill: $color-gray50;

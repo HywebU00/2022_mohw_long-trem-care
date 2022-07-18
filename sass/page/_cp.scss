@@ -11,6 +11,9 @@ h2.title {
     background-color: #fff;
     box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
+    @include screen('mobile') {
+        padding: 1em;
+    }
 }
 
 // .tt{ color: #222; }
@@ -327,10 +330,7 @@ h2.title {
             //flex: 1 1 calc(100% / 3);
             margin: 0 1.5em .5em 0;
             @include screen('tablet') {
-                flex: 1 1 calc(100% / 2);
-            }
-            @include screen('mobile') {
-                flex: 1 1 calc(100% / 1);
+                flex-basis: 100%;
             }
         }
     }
