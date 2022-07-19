@@ -65,9 +65,12 @@ div.function {
     box-sizing: border-box;
     @extend %clearfix;
     margin: .5em 0;
+    padding: .5em 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid $color-gray20;
+    border-bottom: 1px solid $color-gray20;
     ul {
         @include li-reset;
         display: flex;
@@ -227,21 +230,13 @@ div.function {
             //     width: 30px;
             //     height: 30px;
             // }
-            // a {
-            //     display: block;
-            //     height: 30px;
-            //     &:hover {
-            //         .svg path {
-            //             fill: initial;
-            //         }
-            //         .svg.twitter path {
-            //             fill: #1da1f2;
-            //         }
-            //         .svg.line path {
-            //             fill: #00c300;
-            //         }
-            //     }
-            // }
+            a {
+                &:hover {
+                    .svg path {
+                        fill: initial;
+                    }
+                }
+            }
             &.print {
                 @include screen("mobile") {
                     display: none;
@@ -251,7 +246,7 @@ div.function {
                 a {
                     &:hover {
                         .svg path {
-                            fill: #1877f2;
+                            fill: $color-gray80;
                         }
                     }
                 }

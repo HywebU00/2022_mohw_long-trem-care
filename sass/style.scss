@@ -2,8 +2,8 @@
 @import "_variable"; //變數
 // 共通 common
 @import "sass/common/_mixin"; //客製MIXIN
-@import "sass/common/_grid"; //格線 - bootstrap
-@import "sass/common/_grid-flex"; //格線 - flex
+//@import "sass/common/_grid"; //格線 - bootstrap
+//@import "sass/common/_grid-flex"; //格線 - flex
 @import "sass/common/_normalize"; //reset
 @import "sass/common/_typography"; //CP文字排版
 @import "sass/common/_accessibility"; //無障礙關閉js設定
@@ -16,7 +16,7 @@
 @import "sass/element/_divider"; //分隔線
 @import "sass/element/_image"; //圖片
 @import "sass/element/_icon"; //圖示
-@import "sass/element/_tooltip"; //tooltip
+//@import "sass/element/_tooltip"; //tooltip
 @import "sass/element/_category"; //資料大類
 @import "sass/element/_tag"; //文章標籤
 @import "sass/element/_element"; //小元素
@@ -38,7 +38,7 @@
 @import "sass/modual/_modal"; //pop視窗
 @import "sass/modual/_slick"; //slick
 @import "sass/modual/_function_panel"; //內頁功能面板
-@import "sass/modual/_marquee"; //跑馬燈
+//@import "sass/modual/_marquee"; //跑馬燈
 @import "sass/modual/_paginations"; //分頁
 @import "sass/modual/_notice"; //提示
 @import "sass/modual/_accordion.scss"; //收合式選單

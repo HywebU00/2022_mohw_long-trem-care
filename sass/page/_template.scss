@@ -222,3 +222,14 @@ h4 {
 .hidden {
     display: none;
 }
+
+*[class^="flex-"] {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-6-6 {
+    .col {
+        flex-basis: 50%;
+    }
+}

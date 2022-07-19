@@ -18,6 +18,7 @@ h2.title {
 
 // .tt{ color: #222; }
 .cp {
+    padding: 0 60px;
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -50,6 +51,25 @@ h2.title {
     .pic_full {
         max-width: 100%;
         margin-bottom: 1em;
+        img {
+            width: 100%;
+        }
+    }
+    .text_content {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 2em;
+        height: 100%;
+    }
+    .pic_cover {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     table {
         background: #FFF;
@@ -80,6 +100,27 @@ h2.title {
     }
     a {
         @include aSetting;
+    }
+    .publish_info {
+        font-size: 0.875em;
+        line-height: 1.5em;
+        list-style: none;
+        margin: 0 0 .7em 0;
+        //border-left: solid 5px $primaryColor;
+        //background: #F2F2F2;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-gray60;
+        @extend %clearfix;
+        box-sizing: border-box;
+        li {
+            //flex: 1 1 calc(100% / 3);
+            margin: 0 1.5em .5em 0;
+            @include screen('tablet') {
+                flex-basis: 100%;
+            }
+        }
     }
 }
 
@@ -312,26 +353,10 @@ h2.title {
     }
 }
 
-.cp {
-    .publish_info {
-        font-size: 0.875em;
-        line-height: 1.5em;
-        list-style: none;
-        margin: 0 0 .7em 0;
-        //border-left: solid 5px $primaryColor;
-        //background: #F2F2F2;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        color: $color-gray60;
-        @extend %clearfix;
-        box-sizing: border-box;
-        li {
-            //flex: 1 1 calc(100% / 3);
-            margin: 0 1.5em .5em 0;
-            @include screen('tablet') {
-                flex-basis: 100%;
-            }
+.left_block {
+    &+.center_block {
+        .cp {
+            padding: 0;
         }
     }
 }
