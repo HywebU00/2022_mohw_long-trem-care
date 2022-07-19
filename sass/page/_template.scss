@@ -61,8 +61,8 @@ h4 {
     background-color: $color-bg;
     >.container {
         @include gutter(); //gutter 代表左右要留白
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
     }
     h2.title {
         width: 100%;
@@ -72,12 +72,16 @@ h4 {
         margin: 0 0 .5em 0;
     }
     .breadcrumb {
-        width: 100%;
+        //width: 100%;
     }
     .center_block {
         flex-grow: 1;
         flex-basis: 100%;
         max-width: 100%;
+    }
+    .outerBlock {
+        display: flex;
+        flex-wrap: wrap;
     }
     .left_block {
         flex: none;
@@ -231,5 +235,8 @@ h4 {
 .flex-6-6 {
     .col {
         flex-basis: 50%;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
     }
 }

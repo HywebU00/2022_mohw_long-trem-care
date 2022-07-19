@@ -61,16 +61,17 @@ $function_color:#666;
     display: inline-block;
 }
 
-div.function {
+.function {
+    width: 100%;
     box-sizing: border-box;
     @extend %clearfix;
     margin: .5em 0;
     padding: .5em 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-top: 1px solid $color-gray20;
     border-bottom: 1px solid $color-gray20;
+    min-height: 54px;
     ul {
         @include li-reset;
         display: flex;
@@ -82,7 +83,7 @@ div.function {
             button,
             a {
                 font-size: .813em;
-                display: flex;
+                display: block;
                 padding: .2em;
                 //background: $function_color;
                 //border-color: $function_color;
@@ -121,27 +122,32 @@ div.function {
         }
     }
     .back {
-        a {
-            display: flex;
-            align-items: center;
-            color: $color-gray50;
-            position: relative;
-            font-size: .938em;
+        float: none;
+    }
+}
+
+.back {
+    float: right;
+    a {
+        display: flex;
+        align-items: center;
+        color: $color-gray50;
+        position: relative;
+        font-size: .938em;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url(../images/icon/icon_arrow_left.svg) center no-repeat;
+            background-size: contain;
+            opacity: .5;
+            margin-right: 2px;
+        }
+        &:hover {
+            color: $color-gray70;
             &::before {
-                content: "";
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                background: url(../images/icon/icon_arrow_left.svg) center no-repeat;
-                background-size: contain;
-                opacity: .5;
-                margin-right: 2px;
-            }
-            &:hover {
-                color: $color-gray70;
-                &::before {
-                    opacity: .7;
-                }
+                opacity: .7;
             }
         }
     }
@@ -273,6 +279,7 @@ div.function {
             .svg {
                 width: 32px;
                 height: 32px;
+                display: block;
             }
             .svg path {
                 fill: $color-gray50;

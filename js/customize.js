@@ -99,31 +99,7 @@ $(function() {
         focusOnSelect: true,
         accessibility: true,
         lazyLoad: 'ondemand',
-        ease: 'ease',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
-            }
-        }, {
-            breakpoint: 545,
-            settings: {
-                arrows: true,
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            }
-        }]
+        ease: 'ease'
     });
     $('.cp_slider').slickLightbox({
         caption: 'caption',
