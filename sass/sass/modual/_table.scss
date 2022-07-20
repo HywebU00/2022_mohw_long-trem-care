@@ -1,39 +1,40 @@
 //http://lab.25sprout.com/responsive_table/
 table {
+    border-radius: 6px;
+    overflow: hidden;
     width: 100%;
     border-collapse: collapse;
     @include screen('xs_mobile') {
         width: 100%;
     }
+    tbody {
+        tr {
+            &:last-of-type {
+                td {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
     th,
-    // td:not(.gsib_b,.gsc-search-button) {
-    //     padding: .5em;
-    //     text-align: left;
-    // }
-    // td:not(.gsib_a,.gsc-search-button){
-    //     border: #ddd 1px solid;
-    //     word-break: break-all;
-    //     a {
-    //         word-break: break-all;
-    //     }
-    // }
     td {
         padding: .5em;
-        text-align: left;
+        text-align: center;
     }
-    td{
-        border: #ddd 1px solid;
+    td {
+        border-bottom: $color-gray30 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
         }
     }
     th {
-        background-color: #F3F3F3;
+        background-color: $primaryColor;
         color: #333;
-        border: #DDD 1px solid;
+        border-bottom: $primaryColor 1px solid;
         text-align: center;
         white-space: nowrap;
+        color: #fff;
     }
     &.table_hover {
         tr:hover {
@@ -46,6 +47,7 @@ table {
         }
     }
 }
+
 .table_list {
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
@@ -69,25 +71,29 @@ table {
             // Behave  like a "row"
             border: none !important;
             border-bottom: 1px solid #eee !important;
-            position: relative;
-            padding-left: 35% !important;
+            //position: relative;
+            //padding-left: 35% !important;
             white-space: normal;
             text-align: left;
+            display: flex;
             &:before {
                 content: attr(data-title);
-                position: absolute;
-                top: .5em;
-                left: .5em;
-                width: 30%;
+                //position: absolute;
+                // top: .5em;
+                // left: .5em;
+                width: 40%;
                 padding-right: 10px;
-                white-space: nowrap;
+                //white-space: nowrap;
                 text-align: left;
                 font-weight: bold;
                 color: #000;
+                word-break: break-word;
+                display: block;
             }
         }
     }
 }
+
 // fix_th_table
 .fix_th_table {
     margin: 1em 0;
@@ -144,6 +150,7 @@ table {
         }
     }
 }
+
 .table_wrapper {
     @include screen('mobile') {
         width: 100%;
@@ -161,18 +168,22 @@ table {
         }
     }
 }
-.scroltable{
-    min-width:600px !important;
+
+.scroltable {
+    min-width: 600px !important;
 }
+
 .scroltable-wrapper {
     position: relative;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     overflow-y: hidden;
 }
+
 .scroltable-container {
     overflow: auto;
 }
+
 .scroltable-nav {
     display: none;
     position: absolute;
@@ -181,9 +192,10 @@ table {
     cursor: pointer;
     z-index: 9;
 }
+
 .scroltable-nav.scroltable-nav-left {
     left: 0;
-    @include gradient(rgba(255,255,255,1),rgba(255,255,255,0),horizontal);
+    @include gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), horizontal);
     .tablearrow_left {
         position: fixed;
         left: 0em;
@@ -206,9 +218,10 @@ table {
         }
     }
 }
+
 .scroltable-nav.scroltable-nav-right {
     right: 0;
-    @include gradient(rgba(255,255,255,0),rgba(255,255,255,1),horizontal);
+    @include gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), horizontal);
     .tablearrow_right {
         position: fixed;
         top: 0em;
@@ -230,6 +243,7 @@ table {
         }
     }
 }
+
 @keyframes arrow_left {
     from {
         left: -.2em;
@@ -238,6 +252,7 @@ table {
         left: .3em;
     }
 }
+
 @keyframes arrow_right {
     from {
         right: -.2em;
