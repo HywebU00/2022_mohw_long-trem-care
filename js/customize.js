@@ -101,13 +101,13 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease'
     });
-    $('.cp_slider').slickLightbox({
-        caption: 'caption',
-        lazyLoad: 'ondemand',
-        useHistoryApi: 'true',
-        ease: 'ease',
-        lazy: true
-    });
+    // $('.cp_slider').slickLightbox({
+    //     caption: 'caption',
+    //     lazyLoad: 'ondemand',
+    //     useHistoryApi: 'true',
+    //     ease: 'ease',
+    //     lazy: true
+    // });
     // 
     $('.cppic_slider').slick({
         dots: true,
