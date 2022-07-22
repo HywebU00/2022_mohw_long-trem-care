@@ -1,6 +1,7 @@
 .breadcrumb {
     font-size: .875em;
     margin: 0 0 1.5em 0;
+    display: inline-block;
     ul {
         @include li-reset;
         li {

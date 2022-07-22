@@ -69,7 +69,7 @@ h4 {
         font-weight: 500;
         font-size: 1.875em;
         color: $color-brown;
-        margin: 0 0 .5em 0;
+        margin: .5em 0 1em 0;
     }
     .breadcrumb {
         //width: 100%;
@@ -235,6 +235,15 @@ h4 {
 .flex-6-6 {
     .col {
         flex-basis: 50%;
+        @include screen('mobile') {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.flex-4-4-4 {
+    .col {
+        flex-basis: 33.33333%;
         @include screen('mobile') {
             flex-basis: 100%;
         }
