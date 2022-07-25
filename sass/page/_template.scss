@@ -82,6 +82,7 @@ h4 {
     .outerBlock {
         display: flex;
         flex-wrap: wrap;
+        clear: both;
     }
     .left_block {
         flex: none;
@@ -234,7 +235,7 @@ h4 {
 
 .flex-6-6 {
     .col {
-        flex-basis: 50%;
+        flex: 0 0 50%;
         @include screen('mobile') {
             flex-basis: 100%;
         }
@@ -243,7 +244,7 @@ h4 {
 
 .flex-4-4-4 {
     .col {
-        flex-basis: 33.33333%;
+        flex: 0 0 33.33333%;
         @include screen('mobile') {
             flex-basis: 100%;
         }

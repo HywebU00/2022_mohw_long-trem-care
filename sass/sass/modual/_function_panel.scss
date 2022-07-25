@@ -1,11 +1,10 @@
-.shadowOut {
-    .function_panel {
-        @include screen('mobile') {
-            float: none;
-        }
-    }
-}
-
+// .shadowOut {
+//     .function_panel {
+//         @include screen('mobile') {
+//             float: none;
+//         }
+//     }
+// }
 // function_panel setting   ------------------------
 .function_panel {
     margin: .5em 0;
@@ -17,11 +16,9 @@
     align-items: center;
     float: right;
     @include screen('mobile') {
-        margin: .6em 0;
-        padding: .5em 0 .5em;
-        //float: none;
+        float: none;
         margin: .2em 0;
-        display: flex;
+        display: none;
     }
     .share {
         flex: 0 0 auto;
