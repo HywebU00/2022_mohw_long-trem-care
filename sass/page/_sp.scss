@@ -20,6 +20,9 @@
         color: $color-brown;
         text-align: center;
         font-size: 2rem;
+        &.title_left {
+            text-align: left;
+        }
     }
 }
 
