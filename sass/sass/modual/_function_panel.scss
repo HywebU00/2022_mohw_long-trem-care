@@ -242,6 +242,7 @@ $function_color:#666;
             //     height: 30px;
             // }
             a {
+                display: block;
                 &:hover {
                     .svg path {
                         fill: initial;
@@ -261,7 +262,7 @@ $function_color:#666;
                 a {
                     &:hover {
                         .svg path {
-                            fill: #00c300;
+                            fill: #1da1f2;
                         }
                     }
                 }
@@ -270,7 +271,7 @@ $function_color:#666;
                 a {
                     &:hover {
                         .svg path {
-                            fill: #1da1f2;
+                            fill: #00c300;
                         }
                     }
                 }

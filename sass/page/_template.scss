@@ -228,6 +228,14 @@ h4 {
     display: none;
 }
 
+.text-center {
+    text-align: center!important;
+}
+
+.color-brown {
+    color: $color-brown
+}
+
 *[class^="flex-"] {
     display: flex;
     flex-wrap: wrap;

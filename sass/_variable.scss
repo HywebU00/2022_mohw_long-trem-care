@@ -29,7 +29,7 @@ $btn-word: #222; //按鈕字的顏色
 // 連結顏色
 $aColor: $primaryColor;
 $aHover: darken($aColor, 10);
-$aFocus:#d04500;
+$aFocus: $primaryColor;
 // 表單focus顏色
 $form-focus: $primaryColor; //表單
 $form-btn: $primaryColor; //表單

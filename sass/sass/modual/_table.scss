@@ -1,20 +1,9 @@
 //http://lab.25sprout.com/responsive_table/
 table {
-    border-radius: 6px;
-    overflow: hidden;
     width: 100%;
     border-collapse: collapse;
     @include screen('xs_mobile') {
         width: 100%;
-    }
-    tbody {
-        tr {
-            &:last-of-type {
-                td {
-                    border-bottom: 0;
-                }
-            }
-        }
     }
     th,
     td {
@@ -22,19 +11,17 @@ table {
         text-align: center;
     }
     td {
-        border-bottom: $color-gray30 1px solid;
+        border: $color-gray30 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
         }
     }
     th {
-        background-color: $primaryColor;
         color: #333;
-        border-bottom: $primaryColor 1px solid;
+        border: $color-gray30 1px solid;
         text-align: center;
         white-space: nowrap;
-        color: #fff;
     }
     &.table_hover {
         tr:hover {
@@ -49,6 +36,29 @@ table {
 }
 
 .table_list {
+    margin-bottom: 1em;
+    table {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    tbody {
+        tr {
+            &:last-of-type {
+                td {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+    }
+    td {
+        border: 0;
+        border-bottom: 1px solid #eee !important;
+    }
+    th {
+        color: #fff;
+        background-color: $primaryColor;
+        border-bottom: $primaryColor 1px solid;
+    }
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
@@ -70,7 +80,6 @@ table {
         td {
             // Behave  like a "row"
             border: none !important;
-            border-bottom: 1px solid #eee !important;
             //position: relative;
             //padding-left: 35% !important;
             white-space: normal;

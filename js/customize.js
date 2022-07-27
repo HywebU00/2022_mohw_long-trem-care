@@ -90,9 +90,10 @@ $(function() {
         dots: true,
         infinite: true,
         speed: 500,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1500,
         pauseOnHover: true,
         pauseOnFocus: true,
@@ -101,13 +102,13 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease'
     });
-    // $('.cp_slider').slickLightbox({
-    //     caption: 'caption',
-    //     lazyLoad: 'ondemand',
-    //     useHistoryApi: 'true',
-    //     ease: 'ease',
-    //     lazy: true
-    // });
+    $('.cp_slider').slickLightbox({
+        caption: 'caption',
+        lazyLoad: 'ondemand',
+        useHistoryApi: 'true',
+        ease: 'ease',
+        lazy: true
+    });
     // 
     $('.cppic_slider').slick({
         dots: true,

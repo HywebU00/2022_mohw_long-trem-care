@@ -1,29 +1,20 @@
-.sp {
-    font-size: 1.125em;
-    line-height: 1.8em;
-    .sectionBlock {
-        padding: 2em 0;
-        &:first-child {
-            padding-top: 0;
-        }
-        &:last-child {
-            padding-bottom: 0;
-        }
-        >.container {
-            padding: 0 60px;
-        }
-        &.bg_w {
-            background-color: #fff;
+.sectionBlock {
+    padding: 1em 2em;
+    margin: 1em 0;
+    >.container {
+        padding: 0 60px;
+        @include screen('mobile') {
+            padding: 0 15px;
         }
     }
-    h2 {
-        color: $color-brown;
-        text-align: center;
-        font-size: 2rem;
-        &.title_left {
-            text-align: left;
-        }
+    &.bg_w {
+        background-color: #fff;
     }
+}
+
+.illustrate {
+    text-align: center;
+    color: $color-brown;
 }
 
 .cards_grp {
@@ -37,13 +28,17 @@
     @include screen('mobile') {
         flex-basis: 100%;
     }
+    .title {
+        color: #fff;
+    }
     >a {
         position: relative;
         display: block;
         margin: 0 1em;
         border-radius: 10px;
         overflow: hidden;
-        &:hover {
+        &:hover,
+        &:focus {
             .caption {
                 top: 0;
                 justify-content: center;
@@ -52,6 +47,11 @@
                     overflow: auto;
                     text-overflow: initial;
                 }
+            }
+        }
+        &:focus {
+            .caption {
+                box-shadow: 0 0px 0px 2px $aFocus inset;
             }
         }
     }
@@ -101,6 +101,7 @@
 .infoBlock {
     height: 100%;
     padding: 0 1em;
+    overflow: hidden;
     h3 {
         color: $color-brown;
         font-size: normal;
@@ -118,6 +119,21 @@
             background: url(../images/basic/icon_info.svg) center no-repeat;
             background-size: contain;
         }
+    }
+}
+
+.service_object {
+    ul {
+        @include li-reset;
+        display: flex;
+    }
+    li {
+        margin: 0 1em;
+        flex-basis: calc(33.33333% - 2em);
+        background-color: $color-yellow;
+        min-height: 85px;
+        padding: .5em 1.5em;
+        display: flex;
     }
 }
 
