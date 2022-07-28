@@ -51,7 +51,6 @@ h4 {
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     h2 {
         line-height: 1.25em;
-        font-size: 1.75em;
     }
 }
 
@@ -234,7 +233,7 @@ h4 {
 }
 
 .color-brown {
-    color: $color-brown
+    color: $color-brown!important;
 }
 
 *[class^="flex-"] {
