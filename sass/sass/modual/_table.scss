@@ -57,7 +57,7 @@ table {
     th {
         color: #fff;
         background-color: $primaryColor;
-        border-bottom: $primaryColor 1px solid;
+        border: $primaryColor 1px solid;
     }
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore

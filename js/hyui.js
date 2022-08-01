@@ -46,7 +46,7 @@ $(function() {
     function showSidebar() {
         _sidebar.show();
         _mArea.show().addClass('open');
-        _mArea.animate({ 'margin-left': 0 }, 400, 'easeOutQuint');
+        _mArea.animate({ 'margin-right': 0 }, 400, 'easeOutQuint');
         _body.addClass('noscroll');
         _overlay.fadeIn();
         $('.m_search').hide();
@@ -54,7 +54,7 @@ $(function() {
     }
     // -------------------------------------------- 縮合選單 function
     function hideSidebar() {
-        _mArea.animate({ 'margin-left': _mArea.width() * -1 + 'px' }, 500, 'easeOutQuint', function() {
+        _mArea.animate({ 'margin-right': _mArea.width() * -1 + 'px' }, 500, 'easeOutQuint', function() {
             _sidebar.fadeOut(200);
             _mArea.removeClass('open');
             _mArea.hide();
@@ -139,7 +139,7 @@ $(function() {
             _sidebar.hide();
             _overlay.hide();
             _mArea.css({
-                'margin-left': _mArea.width() * -1 + 'px',
+                'margin-right': _mArea.width() * -1 + 'px',
             });
             liHasChild_level1.on({
                 mouseenter: function() {

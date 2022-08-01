@@ -336,16 +336,15 @@
     .btn_grp {
         flex: 1 1 auto;
         padding: 0.25em 0.5em;
-        border-bottom: solid 1px #444;
+        //border-bottom: solid 1px #444;
         box-sizing: border-box;
         text-align: right;
         .btn {
-            width: auto !important;
-            padding: 0.2em 0.5em !important;
+            width: 100% !important;
+            padding: 0.5em !important;
             margin: 0;
-            background: transparent;
-            font-size: 0.875rem;
-            color: #ddd;
+            background: $color-gray60;
+            color: #fff;
             border: none;
             &:hover,
             &:focus {

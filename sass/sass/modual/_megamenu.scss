@@ -167,6 +167,9 @@
                         bottom: 0;
                         left: 1em;
                         background-color: $color-orange;
+                        @include screen('mobile') {
+                            content: none;
+                        }
                     }
                 }
             }
@@ -187,6 +190,9 @@
                         transform: rotate(45deg);
                         //box-shadow: 0 -2px 4px rgba(0, 0, 0, .2);
                         animation: showArrow 1s;
+                        @include screen('mobile') {
+                            content: none;
+                        }
                     }
                     >a {}
                 }
@@ -288,11 +294,11 @@
             width: 280px;
             position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
             color: #FFF;
             width: 100%;
             height: 3em;
-            background: $primaryColor;
+            background: #fff;
             padding: 0 1em;
             line-height: 3em;
             box-sizing: border-box;
@@ -301,9 +307,9 @@
         padding: 3em 0;
         position:absolute;
         top: 0;
-        left: 0;
+        right: 0;
         height: 100%;
-        background: $primaryColor;
+        background: #fff;
         overflow:hidden;
         overflow-y: auto;
         z-index: 9999;
@@ -312,9 +318,10 @@
         box-sizing: border-box;
         .megamenu {
             width: 100%;
-            @include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
+            //@include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
             margin-bottom: 1em;
             background: #CCC;
+            border-top: 1px solid $color-gray30;
             a {
                 display: block;
                 color: #222;
@@ -328,17 +335,18 @@
                     flex: 1 1 100%;
                     flex-direction: column;
                     max-width: 100%;
+                    margin: 0;
                     >a {
                         padding: .5em 1em;
                         min-height: 2em;
                         line-height: 2em;
                         background: #FFF;
-                        border-bottom: 1px solid #CCC;
+                        color: $color-brown;
                     }
                     &.hasChild {
                         >a {
                             padding: .5em 1em;
-                            color: #222;
+                            color: $color-brown;
                             background: #FFF;
                             padding-right: 36px;
                             position: relative;
@@ -365,13 +373,16 @@
                         padding: 0;
                         background-color: transparent;
                         font-size: 0.938em;
+                        margin: 0;
                         li {
                             a {
                                 display: block;
                                 min-height: 1.5em;
                                 line-height: 1.5em;
-                                padding: .5em 2em .5em 1em !important;
+                                padding: .5em 2em !important;
                                 background: #eee;
+                                border-radius: 0;
+                                color: $color-word;
                                 &:hover,
                                 &:focus {
                                     color: #000;
@@ -380,13 +391,14 @@
                             }
                             &.hasChild {
                                 >a {
-                                    background: #eee;
+                                    background: $color-gray10;
+                                    color: $color-word;
                                 }
                             }
                             li {
                                 a {
-                                    background: rgba(0, 0, 0, .15) !important;
-                                    padding: .5em 1em .5em 4em !important;
+                                    background: $color-gray20 !important;
+                                    padding: .5em 1em .5em 3em !important;
                                     border-bottom: 1px solid #BBB;
                                     &:hover,
                                     &:focus {
@@ -413,7 +425,7 @@
             padding: 0;
             overflow: hidden;
             list-style: none;
-            border: 1px solid rgba(255, 255, 255, .5);
+            border: 1px solid $color-gray30;
             border-bottom: none;
             border-right: none;
             li {
@@ -431,10 +443,10 @@
                     line-height: 2em;
                     padding: .5em 1em;
                     font-size: .938em;
-                    color: #FFF;
+                    color: $color-word;
                     font-weight: bold;
                     text-decoration: none;
-                    border: 1px solid rgba(255, 255, 255, .5);
+                    border: 1px solid $color-gray30;
                     box-sizing: border-box;
                     &:nth-child(odd) {
                         border-left: none;
@@ -442,7 +454,7 @@
                     }
                     &:hover,
                     &:focus {
-                        background: darken($primaryColor, 20);
+                        background: $color-gray30;
                     }
                 }
             }
@@ -487,7 +499,7 @@
         padding: 0;
         min-width: auto;
         top: 0px;
-        right: 0px;
+        left: 0px;
         margin: 0;
         text-indent: -9999px;
         border: none;
@@ -497,11 +509,11 @@
             position: absolute;
             width: 15px;
             height: 15px;
-            border: 3px solid #eee;
+            border: 3px solid #ccc;
             content: "";
             top: 15px;
-            right: 10px;
-            transform: rotate(45deg);
+            left: 10px;
+            transform: rotate(225deg);
             border-right: none;
             border-top: none;
         }
