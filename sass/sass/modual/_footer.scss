@@ -52,6 +52,9 @@ footer {
             }
             a {
                 display: inline-block;
+                &:focus {
+                    box-shadow: 0 0 0 2px $primaryColor;
+                }
             }
             img {
                 display: block;

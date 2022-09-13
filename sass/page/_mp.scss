@@ -122,7 +122,8 @@
                 transition-duration: 0.2s;
                 transition-timing-function: ease-out;
             }
-            &:hover {
+            &:hover,
+            &:focus {
                 color: #FFF;
                 &::before {
                     transform: scale(1);
@@ -134,7 +135,8 @@
                 &::before {
                     background: $secondaryColor;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     i {
                         display: inline-block;
                         transform: scale(1.2) translateY(-2px);
@@ -215,7 +217,8 @@
                     border-radius: 8px;
                     background-color: $color-gray10;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     background: #fff;
                     box-shadow: 0px 0px 20px rgba(209, 106, 19, 0.35);
                     img {

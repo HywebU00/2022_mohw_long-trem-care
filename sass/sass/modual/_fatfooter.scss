@@ -87,7 +87,8 @@
                     background-color: $color-gray70;
                     color: $color-yellow;
                     transition: .2s ease-in;
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         box-shadow: none;
                         background-color: $primaryColor;
                         color: #fff;
@@ -128,7 +129,8 @@
                             line-height: 1.5em;
                             padding: .5em 0;
                             background: none;
-                            &:hover {
+                            &:hover,
+                            &:focus {
                                 text-decoration: underline;
                             }
                         }
