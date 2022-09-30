@@ -132,13 +132,13 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         max-width: $container-max;
         margin: 0 auto;
         // 第一層選單樣式
         >li {
-            flex: 1 1 auto;
+            //flex: 1 1 auto;
             &:hover {
                 >a {
                     color: $color-brown;

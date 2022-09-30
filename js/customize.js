@@ -31,8 +31,9 @@ $(function() {
     });
     // 廣告輪播
     $('.adSlider').slick({
-        centerMode: true,
-        centerPadding: '220px',
+        accessibility: true,
+        //centerMode: true,
+        //centerPadding: '10%',
         dots: false,
         infinite: true,
         speed: 300,
@@ -44,25 +45,8 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease',
         responsive: [{
-            breakpoint: 1680,
-            settings: {
-                centerPadding: '220px',
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
             breakpoint: 1440,
             settings: {
-                centerPadding: '180px',
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 1200,
-            settings: {
-                centerPadding: '160px',
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
@@ -70,15 +54,6 @@ $(function() {
         }, {
             breakpoint: 768,
             settings: {
-                centerPadding: '100px',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            }
-        }, {
-            breakpoint: 575,
-            settings: {
-                centerPadding: '30px',
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false
@@ -102,14 +77,14 @@ $(function() {
         lazyLoad: 'ondemand',
         ease: 'ease'
     });
-    $('.cp_slider').slickLightbox({
-        caption: 'caption',
-        lazyLoad: 'ondemand',
-        useHistoryApi: 'true',
-        ease: 'ease',
-        lazy: true
-    });
-    // 
+    // $('.cp_slider').slickLightbox({
+    //     caption: 'caption',
+    //     lazyLoad: 'ondemand',
+    //     useHistoryApi: 'true',
+    //     ease: 'ease',
+    //     lazy: true
+    // });
+
     $('.cppic_slider').slick({
         dots: true,
         infinite: false,
