@@ -5422,8 +5422,10 @@ table.table_sprite tr:nth-child(even) {
     text-align: left;
   }
 }
-.lp .table_list {
-  margin: 0 10px;
+@media screen and (max-width: 767px) {
+  .lp .table_list {
+    padding: 0 10px;
+  }
 }
 .lp .table_list table {
   border-radius: 0;

@@ -22,7 +22,10 @@
     }
   }
   .table_list {
-    padding: ;: 0 10px;
+    @include screen('mobile') {
+      padding: 0 10px;
+    }
+
     table {
       border-radius: 0;
     }
