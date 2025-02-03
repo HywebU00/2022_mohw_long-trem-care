@@ -2,11 +2,12 @@
   table {
     td {
       a {
-        @include aSetting_nocolor;
+        //@include aSetting_nocolor;
       }
       &.date {
         text-align: center;
         color: #666;
+        white-space: nowrap;
         @include screen('mobile') {
           text-align: left;
         }
@@ -16,6 +17,40 @@
         color: #666;
         @include screen('mobile') {
           text-align: left;
+        }
+      }
+    }
+  }
+  .table_list {
+    padding: ;: 0 10px;
+    table {
+      border-radius: 0;
+    }
+    &.download {
+      td {
+        & > a {
+          display: block;
+          position: relative;
+          padding-left: 2em;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            display: block;
+            background: url(../images/basic/icon_download.svg) center no-repeat;
+            background-size: contain;
+            flex: none;
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            transition: 0.2s ease-in;
+          }
+          &:hover {
+            &::before {
+              transform: translateY(2px);
+            }
+          }
         }
       }
     }

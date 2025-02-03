@@ -5126,10 +5126,10 @@ table {
 }
 table th,
 table td {
-  padding: 0.5em;
   text-align: center;
 }
 table td {
+  padding: 1em 0.8em;
   border: #D6D6D6 1px solid;
   word-break: break-all;
 }
@@ -5137,16 +5137,17 @@ table td a {
   word-break: break-all;
 }
 table th {
+  padding: 0.8em;
   color: #333;
   border: #D6D6D6 1px solid;
   text-align: center;
   white-space: nowrap;
 }
 table.table_hover tr:hover {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 table.table_sprite tr:nth-child(even) {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .table_list {
@@ -5156,8 +5157,24 @@ table.table_sprite tr:nth-child(even) {
   border-radius: 6px;
   overflow: hidden;
 }
+.table_list tbody tr:hover {
+  background: #f3f3f3;
+}
 .table_list tbody tr:last-of-type td {
   border-bottom: 0 !important;
+}
+.table_list th.setLeft,
+.table_list td.setLeft {
+  text-align: left;
+}
+.table_list th a,
+.table_list td a {
+  color: #1C1B1B;
+}
+.table_list th a:hover,
+.table_list td a:hover {
+  color: #d04500;
+  text-decoration: underline;
 }
 .table_list td {
   border: 0;
@@ -5168,7 +5185,7 @@ table.table_sprite tr:nth-child(even) {
   background-color: #d04500;
   border: #d04500 1px solid;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .table_list {
     background-color: transparent !important;
   }
@@ -5196,7 +5213,8 @@ table.table_sprite tr:nth-child(even) {
   }
   .table_list td:before {
     content: attr(data-title);
-    width: 40%;
+    flex: 0 0 110px;
+    width: 110px;
     padding-right: 10px;
     text-align: left;
     font-weight: bold;
@@ -5385,17 +5403,10 @@ table.table_sprite tr:nth-child(even) {
     right: 0.3em;
   }
 }
-.lp table td a {
-  color: #1C1B1B;
-  text-decoration: none;
-}
-.lp table td a:hover, .lp table td a:focus {
-  color: #9d3400;
-  cursor: pointer;
-}
 .lp table td.date {
   text-align: center;
   color: #666;
+  white-space: nowrap;
 }
 @media screen and (max-width: 767px) {
   .lp table td.date {
@@ -5410,6 +5421,34 @@ table.table_sprite tr:nth-child(even) {
   .lp table td.num {
     text-align: left;
   }
+}
+.lp .table_list {
+  margin: 0 10px;
+}
+.lp .table_list table {
+  border-radius: 0;
+}
+.lp .table_list.download td > a {
+  display: block;
+  position: relative;
+  padding-left: 2em;
+}
+.lp .table_list.download td > a::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  background: url(../images/basic/icon_download.svg) center no-repeat;
+  background-size: contain;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  transition: 0.2s ease-in;
+}
+.lp .table_list.download td > a:hover::before {
+  transform: translateY(2px);
 }
 
 .list {
