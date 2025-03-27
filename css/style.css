@@ -393,14 +393,9 @@ th {
   }
 }
 
-a:focus {
+a:focus-visible {
   outline: none;
   box-shadow: 0 0px 0px 2px #d04500 inset;
-}
-@media screen and (max-width: 767px) {
-  a:focus {
-    box-shadow: none;
-  }
 }
 
 .accesskey {
@@ -431,7 +426,7 @@ a.goCenter {
   opacity: 0;
   transition: 0.5s;
   border-radius: 0px 0px 4px 4px;
-  color: #FFF;
+  color: #fff;
 }
 @media screen and (max-width: 767px) {
   a.goCenter {
@@ -449,7 +444,7 @@ a.goCenter:hover, a.goCenter:focus {
   display: block;
   padding: 0.5em;
   border: 2px solid #d04500;
-  background: #FFF;
+  background: #fff;
   color: #666;
   overflow: hidden;
   line-height: 1.45em;
@@ -553,7 +548,7 @@ a.goCenter:hover, a.goCenter:focus {
   display: inline-block;
   width: 22%;
   margin: 0 1% 1em;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
 }
 @media screen and (max-width: 767px) {
   .no-js .adSlider .img-container {
@@ -1913,7 +1908,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   min-height: auto;
   background: transparent;
   border: none;
-  box-shadow: none;
   box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
@@ -3055,8 +3049,9 @@ footer .footer_icon img {
 .fatfooter .btn-fatfooter {
   font-size: 0.813em;
   display: block;
+  height: 36px;
   min-width: 6em;
-  color: #FFF;
+  color: #fff;
   border: none;
   background: transparent;
   position: absolute;
@@ -5939,11 +5934,11 @@ table.table_sprite tr:nth-child(even) {
 }
 
 .adSlider {
-  padding: 10px 0;
+  padding: 10px 10%;
   background-color: #EBEBEB;
   margin-bottom: 2em;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1440px) {
   .adSlider {
     padding: 5px 0;
   }
@@ -5955,13 +5950,8 @@ table.table_sprite tr:nth-child(even) {
   top: 0;
   left: 0;
   height: 100%;
-  width: 120px;
+  width: 10%;
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
-}
-@media screen and (max-width: 767px) {
-  .adSlider::before {
-    content: none;
-  }
 }
 .adSlider::after {
   content: "";
@@ -5970,39 +5960,30 @@ table.table_sprite tr:nth-child(even) {
   top: 0;
   right: 0;
   height: 100%;
-  width: 120px;
+  width: 10%;
   background: linear-gradient(270deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
 }
-@media screen and (max-width: 767px) {
-  .adSlider::after {
-    content: none;
+.adSlider .slick-prev {
+  left: calc(10% - 40px);
+}
+@media screen and (max-width: 1440px) {
+  .adSlider .slick-prev {
+    left: 10px;
   }
 }
-.adSlider .slick-list {
-  padding: 0 10%;
+.adSlider .slick-next {
+  right: calc(10% - 40px);
+}
+@media screen and (max-width: 1440px) {
+  .adSlider .slick-next {
+    right: 10px;
+  }
 }
 .adSlider .img-container {
-  max-height: 240px;
   margin: 10px;
   background-color: #EBEBEB;
-  overflow: hidden;
+  aspect-ratio: 2/1;
   overflow: visible;
-}
-.adSlider .img-container:before {
-  display: inline-block;
-  content: "";
-  padding-top: 50%;
-}
-.adSlider .img-container img {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
 }
 @media screen and (max-width: 575px) {
   .adSlider .img-container {
@@ -6013,12 +5994,16 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   text-align: center;
   transition: 0.3s ease-in;
+  width: 100%;
+  height: 100%;
 }
 .adSlider .img-container a:hover {
   transform: scale(1.05);
 }
 .adSlider .img-container a img {
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
@@ -6162,7 +6147,7 @@ table.table_sprite tr:nth-child(even) {
   transform: rotate(45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   transition: 0.3s all ease-out;
 }
@@ -6173,7 +6158,7 @@ table.table_sprite tr:nth-child(even) {
   transform: rotate(-45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   transition: 0.3s all ease-out;
 }
@@ -6183,7 +6168,7 @@ table.table_sprite tr:nth-child(even) {
   border: none;
 }
 .slick-lightbox-close:hover:before, .slick-lightbox-close:hover:after, .slick-lightbox-close:focus:before, .slick-lightbox-close:focus:after {
-  background: #FFF;
+  background: #fff;
 }
 
 .function_panel {

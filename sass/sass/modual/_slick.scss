@@ -3,124 +3,124 @@
 /* Slider */
 
 .slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .slick-list:focus {
-    outline: none;
+  outline: none;
 }
 
 .slick-list.dragging {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slick-track:before,
 .slick-track:after {
-    display: table;
-    content: '';
+  display: table;
+  content: '';
 }
 
 .slick-track:after {
-    clear: both;
+  clear: both;
 }
 
 .slick-loading .slick-track {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
 }
 
 [dir='rtl'] .slick-slide {
-    float: right;
+  float: right;
 }
 
 .slick-slide img {
-    display: block;
+  display: block;
 }
 
 .slick-slide.slick-loading img {
-    display: none;
+  display: none;
 }
 
 .slick-slide.dragging img {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .slick-initialized .slick-slide {
-    display: block;
+  display: block;
 }
 
 .slick-loading .slick-slide {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
 }
 
 .slick-arrow.slick-hidden {
-    display: none;
+  display: none;
 }
 
 // 共用slick的a focus
 .slick-slide {
-    a {
-        &:focus {
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 99;
-                @include box-shadow(0px 0px 0px 2px $aFocus inset);
-            }
-        }
+  a {
+    &:focus {
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        @include box-shadow(0px 0px 0px 2px $aFocus inset);
+      }
     }
+  }
 }
 
 // slick_theme.css
@@ -129,74 +129,70 @@
 
 .slick-prev,
 .slick-next {
-    font-size: 0em;
-    line-height: 0em;
-    position: absolute;
-    top: 40%;
-    display: block;
-    width: 40px !important;
-    height: 60px !important;
-    padding: 0 !important;
-    min-width: auto;
-    z-index: 2;
-    cursor: pointer;
-    border: none;
+  font-size: 0em;
+  line-height: 0em;
+  position: absolute;
+  top: 40%;
+  display: block;
+  width: 40px !important;
+  height: 60px !important;
+  padding: 0 !important;
+  min-width: auto;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s ease-out;
+  &:hover,
+  &:focus {
+    border: none !important;
     outline: none;
-    box-shadow: none;
-    transition: .3s ease-out;
-    &:hover,
-    &:focus {
-        border: none !important;
-        outline: none;
-        box-shadow: 0px 0px 0px 2px $aFocus inset;
-    }
+    box-shadow: 0px 0px 0px 2px $aFocus inset;
+  }
 }
-
 
 /* 上一則 位置 圖片*/
 
 .slick-prev {
+  background: url(../images/slick/icon_arrow_left.png) no-repeat center center;
+  background-size: 80%;
+  left: 15px;
+  opacity: 0.7;
+  &:hover,
+  &:focus {
     background: url(../images/slick/icon_arrow_left.png) no-repeat center center;
     background-size: 80%;
     left: 15px;
-    opacity: .7;
-    &:hover,
-    &:focus {
-        background: url(../images/slick/icon_arrow_left.png) no-repeat center center;
-        background-size: 80%;
-        left: 15px;
-        opacity: 1;
-    }
+    opacity: 1;
+  }
 }
-
 
 /* 下一則 位置 圖片*/
 
 .slick-next {
-    right: 15px;
+  right: 15px;
+  background: url(../images/slick/icon_arrow_right.png) no-repeat center center;
+  background-size: 80%;
+  opacity: 0.7;
+  /* 箭頭 hover及focus 樣式 */
+  &:hover,
+  &:focus {
     background: url(../images/slick/icon_arrow_right.png) no-repeat center center;
     background-size: 80%;
-    opacity: .7;
-    /* 箭頭 hover及focus 樣式 */
-    &:hover,
-    &:focus {
-        background: url(../images/slick/icon_arrow_right.png) no-repeat center center;
-        background-size: 80%;
-        opacity: 1;
-    }
+    opacity: 1;
+  }
 }
-
 
 /* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
 
 .slick-disabled {
-    opacity: .25;
+  opacity: 0.25;
 }
-
 
 /* ---點的樣式---*/
 
-// slick dots 
+// slick dots
 // .slick-dots {
 //     position: absolute;
 //     right: 0;
@@ -230,350 +226,362 @@
 /* ---點的位置、大小、顏色---*/
 
 .slick-dots {
-    /* 位置距離 */
-    bottom: 5px;
-    li {
-        /* 兩點的距離 */
-        margin: 0 5px;
-        width: 45px;
-        height: 4px;
-        button {
-            /* 點的顏色 */
-            background: #666;
-            opacity: .4;
-            width: 45px;
-            height: 4px;
-            border-radius: 5px;
-            &:hover,
-            &:focus {
-                opacity: 1;
-                /* 點hover的顏色 */
-                background: #21baff;
-            }
-            &:focus {
-                opacity: 1;
-                /* 點focus的顏色 */
-                background: #ff3e4d;
-                // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
-            }
-            &::before {
-                content: none;
-            }
-        }
-        &.slick-active {
-            button {
-                opacity: 1;
-                /* 點 active 的顏色 */
-                background: $aColor;
-                &:hover {
-                    /* 點 active  hover的顏色 */
-                    background: $aHover;
-                }
-                &:focus {
-                    /* 點 active  focus的顏色 */
-                    background: $aHover;
-                }
-            }
-        }
+  /* 位置距離 */
+  bottom: 5px;
+  li {
+    /* 兩點的距離 */
+    margin: 0 5px;
+    width: 45px;
+    height: 4px;
+    button {
+      /* 點的顏色 */
+      background: #666;
+      opacity: 0.4;
+      width: 45px;
+      height: 4px;
+      border-radius: 5px;
+      &:hover,
+      &:focus {
+        opacity: 1;
+        /* 點hover的顏色 */
+        background: #21baff;
+      }
+      &:focus {
+        opacity: 1;
+        /* 點focus的顏色 */
+        background: #ff3e4d;
+        // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
+      }
+      &::before {
+        content: none;
+      }
     }
+    &.slick-active {
+      button {
+        opacity: 1;
+        /* 點 active 的顏色 */
+        background: $aColor;
+        &:hover {
+          /* 點 active  hover的顏色 */
+          background: $aHover;
+        }
+        &:focus {
+          /* 點 active  focus的顏色 */
+          background: $aHover;
+        }
+      }
+    }
+  }
 }
 
 // ---------slick._scss
 .cp_slider {
-    width: 100%;
-    padding-bottom: 3em;
-    @include gutter(0);
-    .slick-list {
-        position: relative;
-        &::before {
-            content: "";
-            display: block;
-            width: 76px;
-            height: 100%;
-            position: absolute;
-            z-index: 1;
-            right: 0;
-            top: 0;
-            background: linear-gradient(270deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
-        }
-        &::after {
-            content: "";
-            display: block;
-            width: 76px;
-            height: 100%;
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 100%);
-        }
+  width: 100%;
+  padding-bottom: 3em;
+  @include gutter(0);
+  .slick-list {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 76px;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
     }
-    .img-container {
-        @include aspect-ratio(2, 1);
-        img {
-            object-fit: cover;
-        }
+    &::after {
+      content: '';
+      display: block;
+      width: 76px;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
     }
-    .slick-prev {
-        @include screen('mobile') {
-            top: 30%;
-            left: 1%;
-            background-size: 60%;
-        }
+  }
+  .img-container {
+    @include aspect-ratio(2, 1);
+    img {
+      object-fit: cover;
     }
-    .slick-next {
-        @include screen('mobile') {
-            top: 30%;
-            right: 1%;
-            background-size: 60%;
-        }
+  }
+  .slick-prev {
+    @include screen('mobile') {
+      top: 30%;
+      left: 1%;
+      background-size: 60%;
     }
+  }
+  .slick-next {
+    @include screen('mobile') {
+      top: 30%;
+      right: 1%;
+      background-size: 60%;
+    }
+  }
 }
 
 // slick._scss
 // adSlider
 .adSlider {
-    padding: 10px 0;
-    background-color: $color-gray20;
-    margin-bottom: 2em;
-    @include screen('xs_mobile') {
-        padding: 5px 0;
+  padding: 10px 10%;
+  background-color: $color-gray20;
+  margin-bottom: 2em;
+  @media screen and (max-width: 1440px) {
+    padding: 5px 0;
+  }
+  //   @include screen('xs_mobile') {
+  //     padding: 5px 0;
+  //   }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
+    // @include screen('mobile') {
+    //   content: none;
+    // }
+    @media screen and (max-width: 1440px) {
     }
-    &::before {
-        content: "";
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
+    // @include screen('mobile') {
+    //   content: none;
+    // }
+  }
+  .slick-list {
+    //padding: 0 10%;
+  }
+  .slick-prev {
+    left: calc(10% - 40px);
+    @media screen and (max-width: 1440px) {
+      left: 10px;
+    }
+  }
+  .slick-next {
+    right: calc(10% - 40px);
+    @media screen and (max-width: 1440px) {
+      right: 10px;
+    }
+  }
+  .img-container {
+    // width: 440px;
+    // max-height: 240px;
+    margin: 10px;
+    background-color: $color-gray20;
+    //@include aspect-ratio(2, 1);
+    aspect-ratio: 2/1;
+    overflow: visible;
+    @include screen('xs_mobile') {
+      margin: 5px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      transition: 0.3s ease-in;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        transform: scale(1.05);
+      }
+      img {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      }
+    }
+    &:focus {
+      &:before {
+        content: '';
         position: absolute;
-        z-index: 1;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 120px;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.35) 100%);
-        @include screen('mobile') {
-            content: none;
-        }
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: 0;
+        bottom: 0;
         right: 0;
-        height: 100%;
-        width: 120px;
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%);
-        @include screen('mobile') {
-            content: none;
-        }
+        box-shadow: 0 0px 0px 3px $primaryColor inset;
+      }
     }
-    .slick-list {
-        padding: 0 10%;
-    }
-    // .slick-prev {
-    //     background: url(../images/slick/icon_arrow_left.png) no-repeat center center;
-    //     background-size: 80%;
-    //     left: 15px;
-    // }
-    // .slick-next {
-    //     background: url(../images/slick/icon_arrow_right.png) no-repeat center center;
-    //     background-size: 80%;
-    //     right: 15px;
-    // }
-    .img-container {
-        // width: 440px;
-        max-height: 240px;
-        margin: 10px;
-        background-color: $color-gray20;
-        @include aspect-ratio(2, 1);
-        overflow: visible;
-        @include screen('xs_mobile') {
-            margin: 5px;
-        }
-        a {
-            display: block;
-            text-align: center;
-            transition: .3s ease-in;
-            &:hover {
-                transform: scale(1.05);
-            }
-            img {
-                margin: 0 auto;
-                object-fit: cover;
-                border-radius: 4px;
-                border: 1px solid #fff;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-            }
-        }
-        &:focus {
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: 9;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                box-shadow: 0 0px 0px 3px $primaryColor inset;
-            }
-        }
-    }
-    .slick-list {}
+  }
+  .slick-list {
+  }
 }
-
 
 /*  slick-lightbox  */
 
 .slick-lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 999999;
-    width: 100%;
-    height: 100%;
-    background: black;
-    -webkit-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
-    .slick-loading .slick-list {
-        background-color: transparent
-    }
-    .slick-prev {
-        left: 5px;
-        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
-        background-size: 80%;
-        z-index: 9;
-    }
-    .slick-next {
-        right: 5px;
-        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
-        background-size: 80%;
-        z-index: 9;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background: black;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  .slick-loading .slick-list {
+    background-color: transparent;
+  }
+  .slick-prev {
+    left: 5px;
+    background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat;
+    background-size: 80%;
+    z-index: 9;
+  }
+  .slick-next {
+    right: 5px;
+    background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat;
+    background-size: 80%;
+    z-index: 9;
+  }
 }
 
 .slick-lightbox-hide {
-    opacity: 0;
-    &.slick-lightbox-ie {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0)
-    }
+  opacity: 0;
+  &.slick-lightbox-ie {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
+  }
 }
 
 .slick-lightbox-hide-init {
-    position: absolute;
-    top: -9999px;
-    opacity: 0;
-    &.slick-lightbox-ie {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0)
-    }
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+  &.slick-lightbox-ie {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
+  }
 }
 
 .slick-lightbox-inner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .slick-lightbox-slick-item {
-    text-align: center;
-    overflow: hidden;
-    &:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -0.25em;
-    }
+  text-align: center;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
 }
 
 .slick-caption-bottom .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-item .slick-lightbox-slick-caption {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .slick-lightbox-slick-item-inner {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 90%;
-    max-height: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .slick-lightbox-slick-img {
-    margin: 0 auto 1em;
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
+  margin: 0 auto 1em;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .slick-lightbox-slick-caption {
-    margin: 20px 0 0;
-    color: white;
-    @extend %clearfix;
+  margin: 20px 0 0;
+  color: white;
+  @extend %clearfix;
 }
 
 .slick-lightbox-close {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: block;
-    height: 45px;
-    width: 45px;
-    line-height: 0;
-    font-size: 0em;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-    padding: 0;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: block;
+  height: 45px;
+  width: 45px;
+  line-height: 0;
+  font-size: 0em;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  padding: 0;
+  border: none;
+  min-width: auto;
+  &:focus {
+    outline: none;
+  }
+  &:before {
+    content: '';
+    height: 6px;
+    width: 32px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 18px;
+    background: #ddd;
+    left: 6px;
+    transition: 0.3s all ease-out;
+  }
+  &:after {
+    content: '';
+    height: 6px;
+    width: 32px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 18px;
+    background: #ddd;
+    left: 6px;
+    transition: 0.3s all ease-out;
+  }
+  &:hover,
+  &:focus {
+    background: none;
+    margin-top: 0;
     border: none;
-    min-width: auto;
-    &:focus {
-        outline: none;
-    }
-    &:before {
-        content: "";
-        height: 6px;
-        width: 32px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 18px;
-        background: #DDD;
-        left: 6px;
-        transition: .3s all ease-out;
-    }
+    &:before,
     &:after {
-        content: "";
-        height: 6px;
-        width: 32px;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 18px;
-        background: #DDD;
-        left: 6px;
-        transition: .3s all ease-out;
+      background: #fff;
     }
-    &:hover,
-    &:focus {
-        background: none;
-        margin-top: 0;
-        border: none;
-        &:before,
-        &:after {
-            background: #FFF;
-        }
-    }
+  }
 }
 
 //  同步輪播
