@@ -6933,7 +6933,7 @@ h4 {
   transition-timing-function: ease-out;
 }
 .master_vision .link_grp .btn:hover, .master_vision .link_grp .btn:focus {
-  color: #FFF;
+  color: #fff;
 }
 .master_vision .link_grp .btn:hover::before, .master_vision .link_grp .btn:focus::before {
   transform: scale(1);
@@ -7087,6 +7087,9 @@ h4 {
 }
 .service_items .items_grp li a:hover img, .service_items .items_grp li a:focus img {
   transform: scale(1.1);
+}
+.service_items .items_grp li a:focus-visible {
+  outline: 2px solid #d04500;
 }
 .service_items .items_grp li a img {
   transition: 0.3s ease-in;
