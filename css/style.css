@@ -457,7 +457,7 @@ a.goCenter:hover, a.goCenter:focus {
   color: #d04500;
 }
 .no-js noscript a:hover, .no-js noscript a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 .no-js .mpSlider .img-container {
   display: none;
@@ -651,7 +651,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 
@@ -713,15 +713,15 @@ kbd kbd {
   color: #333;
 }
 .font_size ul li a:hover, .font_size ul li a:focus {
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
   color: #FFF;
 }
 .font_size ul li a.active {
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
   color: #FFF;
 }
 .font_size ul li a.active:hover, .font_size ul li a.active:focus {
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
   color: #FFF;
 }
 .font_size ul li a.small {
@@ -839,14 +839,14 @@ kbd kbd {
   text-shadow: none;
 }
 .btn:hover {
-  background: #c7c7c7;
+  background: rgb(198.5, 198.5, 198.5);
   border: 1px solid #adadad;
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn:focus {
-  background: #c7c7c7;
+  background: rgb(198.5, 198.5, 198.5);
   border: 1px solid #adadad;
   cursor: pointer;
   color: #FFF;
@@ -854,7 +854,7 @@ kbd kbd {
   box-shadow: 0 0px 0px 2px #d04500 !important;
 }
 .btn.active {
-  background: #ededed;
+  background: rgb(236.75, 236.75, 236.75);
   cursor: pointer;
 }
 .btn:hover, .btn:focus {
@@ -869,52 +869,52 @@ kbd kbd {
   border-radius: 4px;
 }
 .btn-submit:hover {
-  background: #9d3400;
-  border: 1px solid #6a2300;
+  background: rgb(157, 52.0817307692, 0);
+  border: 1px solid rgb(106, 35.1634615385, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-submit:focus {
-  background: #9d3400;
-  border: 1px solid #6a2300;
+  background: rgb(157, 52.0817307692, 0);
+  border: 1px solid rgb(106, 35.1634615385, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #d04500 !important;
 }
 .btn-submit.active {
-  background: #ea4d00;
+  background: rgb(233.5, 77.4591346154, 0);
   cursor: pointer;
 }
 
 .btn-reset {
-  color: #434141;
+  color: rgb(66.9454545455, 64.5545454545, 64.5545454545);
 }
 
 .btn-search {
-  background: #ea4d00;
-  border: 1px solid #ea4d00;
+  background: rgb(233.5, 77.4591346154, 0);
+  border: 1px solid rgb(233.5, 77.4591346154, 0);
   color: #FFF;
   border-radius: 4px;
 }
 .btn-search:hover {
-  background: #b73d00;
-  border: 1px solid #842c00;
+  background: rgb(182.5, 60.5408653846, 0);
+  border: 1px solid rgb(131.5, 43.6225961538, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-search:focus {
-  background: #b73d00;
-  border: 1px solid #842c00;
+  background: rgb(182.5, 60.5408653846, 0);
+  border: 1px solid rgb(131.5, 43.6225961538, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #d04500 !important;
 }
 .btn-search.active {
-  background: #ff5704;
+  background: rgb(255, 87.2644230769, 4);
   cursor: pointer;
 }
 
@@ -924,18 +924,18 @@ kbd kbd {
   border: solid 1px #d04500 !important;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background: #9d3400 !important;
+  background: rgb(157, 52.0817307692, 0) !important;
   border: solid 1px #d04500 !important;
 }
 
 .btn-secondary {
   background: #fff !important;
-  color: #842c00 !important;
+  color: rgb(131.5, 43.6225961538, 0) !important;
   border: solid 1px #d04500 !important;
   text-shadow: none !important;
 }
 .btn-secondary:hover, .btn-secondary:focus {
-  color: #371200 !important;
+  color: rgb(55, 18.2451923077, 0) !important;
   background: #b5deff !important;
   border: solid 1px #b5deff !important;
 }
@@ -947,7 +947,7 @@ kbd kbd {
   text-shadow: none !important;
 }
 .btn-normal:hover, .btn-normal:focus {
-  color: #404046 !important;
+  color: rgb(64.3815165877, 64.3815165877, 70.1184834123) !important;
   background: #c3c3c3 !important;
   border: solid 1px #c3c3c3 !important;
 }
@@ -958,7 +958,7 @@ kbd kbd {
   border: 1px solid #ddd !important;
 }
 .btn-back:hover, .btn-back:focus {
-  background: #9d3400 !important;
+  background: rgb(157, 52.0817307692, 0) !important;
   border: 1px solid #ddd !important;
 }
 
@@ -1197,7 +1197,7 @@ img.loaded {
   left: 0;
   bottom: 0;
   right: 0;
-  box-shadow: 0 0px 0px 2px #9d3400 inset;
+  box-shadow: 0 0px 0px 2px rgb(157, 52.0817307692, 0) inset;
 }
 .img-container img {
   position: absolute;
@@ -1849,7 +1849,7 @@ div.tag ul li a {
   padding: 0.2em 0.5em;
 }
 div.tag ul li a:hover, div.tag ul li a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 
@@ -2032,7 +2032,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-decoration: none;
 }
 .header .navigation .navlist li a:hover, .header .navigation .navlist li a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 .header .navigation .language {
@@ -2131,7 +2131,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .search .btn_grp .btn-search:hover,
 .search .btn_grp .btn-search:focus {
   box-shadow: none;
-  background-color: #003239;
+  background-color: rgb(0, 49.6097560976, 56.5);
 }
 
 .m_search {
@@ -2294,17 +2294,17 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: inline-block;
   margin-left: 0.5em;
   vertical-align: middle;
-  border: 2px solid #847f7f;
+  border: 2px solid rgb(131.7818181818, 127.2181818182, 127.2181818182);
   transform: rotate(135deg);
   border-bottom: none;
   border-left: none;
   margin-bottom: 0.2em;
 }
 .menu > ul > li:hover > a {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 .menu > ul > li:hover > a:after {
-  border: 2px solid #9d3400;
+  border: 2px solid rgb(157, 52.0817307692, 0);
   border-bottom: none;
   border-left: none;
 }
@@ -2340,7 +2340,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-weight: bold;
 }
 .menu ul li ul li a:hover, .menu ul li ul li a:focus {
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
 }
 .menu ul li ul li.hasChild > ul {
   z-index: 999;
@@ -2454,7 +2454,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   transition: all 0.2s;
 }
 .megamenu ul li ul li ul li a:hover, .megamenu ul li ul li ul li a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 .megamenu ul li ul li ul li a:hover {
@@ -2922,7 +2922,7 @@ footer a {
   color: #d04500;
 }
 footer a:hover, footer a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 footer .footer_info {
   flex: 1 1 auto;
@@ -3023,7 +3023,7 @@ footer .footer_icon a:focus:after {
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0px 0px 0px 1px #9d3400 inset;
+  box-shadow: 0px 0px 0px 1px rgb(157, 52.0817307692, 0) inset;
   z-index: 99;
 }
 footer .footer_icon img {
@@ -3236,7 +3236,7 @@ select::-ms-expand {
 .labelEffect input:focus ~ label, .labelEffect input.used ~ label, .labelEffect textarea:focus ~ label, .labelEffect textarea.used ~ label, .labelEffect select:focus ~ label, .labelEffect select.used ~ label {
   bottom: 0;
   font-size: 0.813em;
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   padding: 0;
   pointer-events: none;
   height: calc(100% + 1.95em);
@@ -3484,7 +3484,7 @@ select::-ms-expand {
   padding-right: 2em;
 }
 .flex-form .form_grp .form_title {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   font-weight: 500;
 }
 .flex-form .form_title {
@@ -3493,7 +3493,7 @@ select::-ms-expand {
   align-self: flex-start;
   padding: 0.65em 0;
   font-weight: 500;
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 @media screen and (max-width: 767px) {
   .flex-form .form_title {
@@ -4895,8 +4895,8 @@ input[type=email]:focus,
 input[type=password]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #ff7937;
-  box-shadow: 0px 0px 0px 2px #ff7937;
+  border: 1px solid rgb(255, 121.3461538462, 55);
+  box-shadow: 0px 0px 0px 2px rgb(255, 121.3461538462, 55);
   outline: none;
 }
 
@@ -4985,22 +4985,22 @@ input[type=checkbox]:focus {
   border-radius: 4px;
 }
 .upload_grp .upload_btn:hover {
-  background: #9d3400;
-  border: 1px solid #6a2300;
+  background: rgb(157, 52.0817307692, 0);
+  border: 1px solid rgb(106, 35.1634615385, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .upload_grp .upload_btn:focus {
-  background: #9d3400;
-  border: 1px solid #6a2300;
+  background: rgb(157, 52.0817307692, 0);
+  border: 1px solid rgb(106, 35.1634615385, 0);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #d04500 !important;
 }
 .upload_grp .upload_btn.active {
-  background: #ea4d00;
+  background: rgb(233.5, 77.4591346154, 0);
   cursor: pointer;
 }
 .upload_grp .upload_btn:hover, .upload_grp .upload_btn:focus {
@@ -5528,7 +5528,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .list > ul > li > a:hover,
 .list ol > li > a:hover {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 .list > ul > li > a .num,
 .list ol > li > a .num {
@@ -5557,7 +5557,7 @@ table.table_sprite tr:nth-child(even) {
 .list ol > li time {
   flex: 0 0 150px;
   display: block;
-  color: #949494;
+  color: #706F6F;
   font-size: 0.938em;
   text-align: right;
 }
@@ -5627,7 +5627,7 @@ table.table_sprite tr:nth-child(even) {
   text-decoration: none;
 }
 .sub_menu li a:hover, .sub_menu li a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 .sub_menu li a .num {
@@ -5854,11 +5854,11 @@ table.table_sprite tr:nth-child(even) {
 }
 .slick-dots li.slick-active button:hover {
   /* 點 active  hover的顏色 */
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
 }
 .slick-dots li.slick-active button:focus {
   /* 點 active  focus的顏色 */
-  background: #9d3400;
+  background: rgb(157, 52.0817307692, 0);
 }
 
 .cp_slider {
@@ -7294,7 +7294,7 @@ h2.title {
   text-decoration: none;
 }
 .cp a:hover, .cp a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 .cp .text_center {
@@ -7566,61 +7566,61 @@ h2.title {
   background: #275cb7;
 }
 .file_download li span.file_doc a:hover, .file_download li span.file_doc a:focus, .file_download li span.file_docx a:hover, .file_download li span.file_docx a:focus, .file_download li span.file_odt a:hover, .file_download li span.file_odt a:focus {
-  background: #2351a2;
+  background: rgb(34.5202702703, 81.4324324324, 161.9797297297);
 }
 .file_download li span.file_xls a, .file_download li span.file_xlsx a, .file_download li span.file_csv a, .file_download li span.file_ods a {
   background: #387947;
 }
 .file_download li span.file_xls a:hover, .file_download li span.file_xls a:focus, .file_download li span.file_xlsx a:hover, .file_download li span.file_xlsx a:focus, .file_download li span.file_csv a:hover, .file_download li span.file_csv a:focus, .file_download li span.file_ods a:hover, .file_download li span.file_ods a:focus {
-  background: #30683d;
+  background: rgb(47.9322033898, 103.5677966102, 60.7711864407);
 }
 .file_download li span.file_ppt a, .file_download li span.file_pptx a, .file_download li span.file_odp a, .file_download li span.file_pdf a {
   background: #c55a3b;
 }
 .file_download li span.file_ppt a:hover, .file_download li span.file_ppt a:focus, .file_download li span.file_pptx a:hover, .file_download li span.file_pptx a:focus, .file_download li span.file_odp a:hover, .file_download li span.file_odp a:focus, .file_download li span.file_pdf a:hover, .file_download li span.file_pdf a:focus {
-  background: #b25135;
+  background: rgb(177.8661417323, 80.7657480315, 52.6338582677);
 }
 .file_download li span.file_pdf a {
   background: #c00;
 }
 .file_download li span.file_pdf a:hover, .file_download li span.file_pdf a:focus {
-  background: #b30000;
+  background: rgb(178.5, 0, 0);
 }
 .file_download li span.file_zip a {
   background: #eb712e;
 }
 .file_download li span.file_zip a:hover, .file_download li span.file_zip a:focus {
-  background: #e96117;
+  background: rgb(232.7729257642, 97.1877729258, 22.7270742358);
 }
 .file_download li span.file_txt a, .file_download li span.file_other a {
   background: #555;
 }
 .file_download li span.file_txt a:hover, .file_download li span.file_txt a:focus, .file_download li span.file_other a:hover, .file_download li span.file_other a:focus {
-  background: #484848;
+  background: rgb(72.25, 72.25, 72.25);
 }
 .file_download li span.file_mov a {
   background: #009999;
 }
 .file_download li span.file_mov a:hover, .file_download li span.file_mov a:focus {
-  background: teal;
+  background: rgb(0, 127.5, 127.5);
 }
 .file_download li span.file_mp3 a, .file_download li span.file_mp4 a {
   background: #088ecc;
 }
 .file_download li span.file_mp3 a:hover, .file_download li span.file_mp3 a:focus, .file_download li span.file_mp4 a:hover, .file_download li span.file_mp4 a:focus {
-  background: #077db3;
+  background: rgb(7.0377358491, 124.9198113208, 179.4622641509);
 }
 .file_download li span.file_jpg a {
   background: #6c29a4;
 }
 .file_download li span.file_jpg a:hover, .file_download li span.file_jpg a:focus {
-  background: #5f2490;
+  background: rgb(94.5658536585, 35.9, 143.6);
 }
 .file_download li span.file_wmv a {
   background: #430a1f;
 }
 .file_download li span.file_wmv a:hover, .file_download li span.file_wmv a:focus {
-  background: #2d0715;
+  background: rgb(44.8116883117, 6.6883116883, 20.7337662338);
 }
 
 .web_link {
@@ -7662,7 +7662,7 @@ h2.title {
   text-decoration: none;
 }
 .web_link li a:hover, .web_link li a:focus {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
   cursor: pointer;
 }
 
@@ -7934,7 +7934,7 @@ h2.title {
   text-decoration: underline;
 }
 .step .howtoApply li a:hover {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 
 .categories ul {
@@ -8155,7 +8155,7 @@ h2.title {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 0px 2px #ea4d00 inset;
+  box-shadow: 0px 0px 0px 2px rgb(233.5, 77.4591346154, 0) inset;
   content: "";
   z-index: 9;
   top: 0;
@@ -8211,7 +8211,7 @@ h2.title {
   margin: 0.5em 0;
 }
 .leftblock_list ul li a:hover {
-  color: #9d3400;
+  color: rgb(157, 52.0817307692, 0);
 }
 
 .leftblock_nodemenu {

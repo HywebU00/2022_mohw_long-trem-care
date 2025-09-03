@@ -89,25 +89,42 @@ $(function () {
   _menu.find('li:last>a').focusout(function () {
     _menu.find('li ul').hide();
   });
-  // megamenu
-  liHasChild2.children('a').keyup(function () {
-    $(this).siblings('ul').fadeIn();
+  // ----------------------megamenu------------------------
+
+  // liHasChild2.children('a').keyup(function () {
+  //   $(this).siblings('ul').fadeIn();
+  //   $(this).siblings('ul').find('ul').fadeIn();
+  //   $(this)
+  //     .parent('li')
+  //     .siblings()
+  //     .focus(function () {
+  //       $(this).hide();
+  //     });
+  // });
+  // _megamenu
+  //   .children('ul')
+  //   .children('li')
+  //   .keyup(function () {
+  //     $(this).siblings().children('ul').hide();
+  //   });
+  // _megamenu.find('li:last>a').focusout(function () {
+  //   _menu.find('li ul').hide();
+  // });
+
+  liHasChild2.children('a').on('keyup', function () {
+    $(this).siblings('ul').fadeIn(); // 展開次選單
     $(this).siblings('ul').find('ul').fadeIn();
-    $(this)
-      .parent('li')
-      .siblings()
-      .focus(function () {
-        $(this).hide();
-      });
   });
+
   _megamenu
     .children('ul')
     .children('li')
-    .keyup(function () {
+    .on('keyup', function () {
       $(this).siblings().children('ul').hide();
     });
-  _megamenu.find('li:last>a').focusout(function () {
-    _menu.find('li ul').hide();
+
+  _megamenu.find('li ul li:last-child a').on('focusout', function () {
+    $(this).closest('ul').hide(); // 收起當前子選單
   });
 
   // 先複製過去
